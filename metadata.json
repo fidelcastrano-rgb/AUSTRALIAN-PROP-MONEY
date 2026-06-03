@@ -1,0 +1,6 @@
+{
+  "name": "Australian Prop Money",
+  "description": "Premium Australian prop money supplier for film productions, television, photography, educational demonstrations, and theatrical productions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

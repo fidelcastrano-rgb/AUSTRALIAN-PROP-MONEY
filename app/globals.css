@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  
+  --color-banknote-green: #0d7f57;
+  --color-banknote-green-light: #e6f4ef;
+  --color-banknote-green-dark: #0a6243;
+  
+  --color-banknote-gold: #f5b041;
+  --color-banknote-blue: #5dade2;
+  --color-banknote-pink: #ec7063;
+  --color-banknote-navy: #1a2942;
+  
+  --color-brand-gray: #f8fafc;
+  --color-brand-border: #e2e8f0;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
