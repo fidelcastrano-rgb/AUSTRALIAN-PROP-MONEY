@@ -1,9 +1,11 @@
-import { ShoppingCart, ShieldCheck, Truck, ChevronRight, Check } from 'lucide-react';
+import { ShieldCheck, Truck, ChevronRight, Check } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { products, getProductBySlug } from '@/lib/data';
 import { generateProductSchema } from '@/lib/schema';
+import ProductDetailAddToCart from '@/components/shared/ProductDetailAddToCart';
+import AddToCartButton from '@/components/shared/AddToCartButton';
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -133,17 +135,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
               </div>
 
               <div className="mt-auto border-t border-slate-200 pt-8">
-                <div className="flex gap-4">
-                  <div className="flex items-center border border-slate-300 rounded bg-slate-50">
-                    <button className="px-4 py-3 text-slate-500 hover:text-banknote-navy transition-colors font-black">-</button>
-                    <span className="px-4 py-3 font-bold text-slate-900 border-x border-slate-200">1</span>
-                    <button className="px-4 py-3 text-slate-500 hover:text-banknote-navy transition-colors font-black">+</button>
-                  </div>
-                  <button className="flex-1 bg-banknote-green text-white rounded font-bold text-lg flex items-center justify-center gap-2 hover:bg-banknote-green-dark transition-colors shadow-md uppercase tracking-wide">
-                    <ShoppingCart className="w-5 h-5" />
-                    Add to Cart
-                  </button>
-                </div>
+                <ProductDetailAddToCart product={{ id: product.id, name: product.name, price: product.price, image: product.image }} />
               </div>
               
               {/* Compliance Warning on Product Level */}
@@ -206,8 +198,9 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
                   <span className="font-bold text-banknote-navy group-hover:text-banknote-green leading-snug mb-3 flex-1 text-sm">
                     {p.name}
                   </span>
-                  <div className="flex items-center justify-between mt-auto">
+                  <div className="flex items-center justify-between mt-auto pt-2">
                     <span className="font-black text-lg text-slate-900">${p.price}</span>
+                    <AddToCartButton product={{ id: p.id, name: p.name, price: p.price, image: p.image }} />
                   </div>
                 </div>
               </Link>

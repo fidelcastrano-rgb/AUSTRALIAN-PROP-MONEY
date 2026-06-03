@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShoppingCart } from 'lucide-react';
 import { generateProductSchema } from '@/lib/schema';
 import { products, categories } from '@/lib/data';
+import AddToCartButton from '@/components/shared/AddToCartButton';
 
 export const metadata = {
   title: 'Shop Premium Prop Currency',
@@ -86,9 +86,7 @@ export default function ProductsPage() {
                   </Link>
                   <div className="flex items-center justify-between mt-auto">
                     <span className="font-black text-2xl text-slate-900">${product.price}</span>
-                    <button className="bg-slate-100 hover:bg-banknote-green hover:text-white p-3 rounded-full text-banknote-navy transition-colors shrink-0 shadow-sm" aria-label="Add to cart">
-                      <ShoppingCart className="w-5 h-5" />
-                    </button>
+                    <AddToCartButton product={{ id: product.id, name: product.name, price: product.price, image: product.image }} />
                   </div>
                 </div>
               </div>

@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Search, ShoppingCart, ChevronDown } from 'lucide-react';
+import { useCart } from '@/components/shared/CartProvider';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { cartCount } = useCart();
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-[36px] sm:top-[40px] z-40">
@@ -59,9 +61,9 @@ export default function Header() {
             <button className="bg-slate-100 px-4 py-2 rounded-full text-xs font-bold text-slate-600 hover:bg-slate-200 transition-colors flex items-center gap-1" aria-label="Search">
               <Search className="w-4 h-4" /> SEARCH
             </button>
-            <Link href="/checkout" className="text-gray-500 hover:text-banknote-green transition-colors flex items-center" aria-label="Cart">
+            <Link href="/cart" className="text-gray-500 hover:text-banknote-green transition-colors flex items-center" aria-label="Cart">
               <ShoppingCart className="w-5 h-5" />
-              <span className="ml-1 text-xs font-bold text-white bg-banknote-navy px-1.5 py-0.5 rounded-full">0</span>
+              {cartCount > 0 && <span className="ml-1 text-xs font-bold text-white bg-banknote-navy px-1.5 py-0.5 rounded-full">{cartCount}</span>}
             </Link>
             <Link href="/products" className="bg-banknote-navy hover:bg-banknote-green text-white px-6 py-2.5 rounded font-bold text-sm transition-colors shadow-sm ml-2">
               REQUEST QUOTE
@@ -70,8 +72,9 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center space-x-4">
-            <Link href="/checkout" className="text-gray-500 flex items-center">
+            <Link href="/cart" className="text-gray-500 flex items-center relative">
               <ShoppingCart className="w-6 h-6" />
+              {cartCount > 0 && <span className="absolute -top-1 -right-2 text-[10px] font-bold text-white bg-banknote-navy px-1.5 py-0.5 rounded-full">{cartCount}</span>}
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
