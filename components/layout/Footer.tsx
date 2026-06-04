@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-banknote-gold shrink-0" />
-                <span className="text-sm">info@australianpropmoney.com.au</span>
+                <span className="text-sm">info@australianpropsmoney.com</span>
               </li>
             </ul>
             <div className="mt-6 flex gap-2 flex-wrap">

@@ -90,7 +90,7 @@ export default function CheckoutPage() {
         `Phone/WhatsApp: ${phone}\n` +
         `Shipping Address: ${address}`;
 
-      const mailtoUrl = `mailto:info@propcounterfeitnotes.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      const mailtoUrl = `mailto:info@australianpropsmoney.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
       window.location.href = mailtoUrl;
     }
     

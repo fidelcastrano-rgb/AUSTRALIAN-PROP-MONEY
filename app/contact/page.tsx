@@ -40,8 +40,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-banknote-green shrink-0 mt-1" />
                   <div className="ml-4">
                     <h3 className="font-bold text-gray-900">Email</h3>
-                    <p className="text-gray-600 mt-1">info@australianpropmoney.com.au</p>
-                    <p className="text-gray-600">sales@australianpropmoney.com.au</p>
+                    <p className="text-gray-600 mt-1">info@australianpropsmoney.com</p>
                   </div>
                 </div>
 
