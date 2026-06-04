@@ -67,7 +67,7 @@ export default function CheckoutPage() {
         `Phone/WhatsApp: ${phone}%0A` +
         `Shipping Address: ${address}`;
 
-      window.open(`https://wa.me/33753827675?text=${message}`, '_blank');
+      window.open(`https://wa.me/447341056054?text=${message}`, '_blank');
     } else {
       // Construct Email message
       const itemsListText = items.map(i => {

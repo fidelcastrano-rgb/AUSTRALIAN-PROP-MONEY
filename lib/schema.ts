@@ -6,7 +6,7 @@ export const organizationSchema = {
   logo: 'https://australianpropmoney.com.au/logo.png',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '1300-123-456',
+    telephone: '+447341056054',
     contactType: 'customer service',
     areaServed: 'AU',
     availableLanguage: 'English'
@@ -20,7 +20,7 @@ export const localBusinessSchema = {
   image: 'https://australianpropmoney.com.au/storefront.jpg',
   '@id': 'https://australianpropmoney.com.au',
   url: 'https://australianpropmoney.com.au',
-  telephone: '1300123456',
+  telephone: '+447341056054',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '123 Production Way',
