@@ -34,10 +34,7 @@ export const metadata: Metadata = {
     "novelty money Gold Coast",
     "production cash stacks",
     "cashier training materials Australia"
-  ],
-  alternates: {
-    canonical: "https://australianpropsmoney.com",
-  }
+  ]
 };
 
 // FAQ Schema for Rich Snippets / Google FAQ Card results

@@ -17,6 +17,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://australianpropsmoney.com'),
+  alternates: {
+    canonical: 'https://australianpropsmoney.com',
+  },
   title: {
     template: '%s | Australian Prop Money',
     default: 'Australian Prop Money for Film, TV & Creative Productions',
@@ -25,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Australian Prop Money',
     description: 'Premium Australian-style prop notes for film production, photography, theatre, training simulations and creative projects.',
-    url: 'https://australianpropsmoney.com',
+    url: '/',
     siteName: 'Australian Prop Money',
     locale: 'en_AU',
     type: 'website',
