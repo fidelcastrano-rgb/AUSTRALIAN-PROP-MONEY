@@ -6,15 +6,8 @@ import Link from 'next/link';
 import { getDiscountedUnitPrice } from '@/lib/utils';
 
 const shippingMethods = [
-  { id: 'uk_standard', name: 'United Kingdom Standard (Tracked Secure Post)', price: 25.00, destination: 'United Kingdom' },
-  { id: 'uk_express', name: 'United Kingdom Express (Overnight Courier)', price: 45.00, destination: 'United Kingdom' },
-  { id: 'eu_standard', name: 'Europe Standard (Priority Tracked Delivery)', price: 30.00, destination: 'Europe' },
-  { id: 'eu_express', name: 'Europe Premium (Express Courier DHL/FedEx)', price: 55.00, destination: 'Europe' },
-  { id: 'ie_standard', name: 'Ireland Standard (Registered Postal)', price: 25.00, destination: 'Ireland' },
-  { id: 'ie_express', name: 'Ireland Express (Priority Overnight Courier)', price: 49.00, destination: 'Ireland' },
-  { id: 'nz_standard', name: 'New Zealand Standard (Tracked Airmail)', price: 35.00, destination: 'New Zealand' },
-  { id: 'nz_express', name: 'New Zealand Priority (Premium DHL Express)', price: 65.00, destination: 'New Zealand' },
-  { id: 'intl_express', name: 'International Worldwide (Super Stealth Tracked)', price: 40.00, destination: 'Rest of World' }
+  { id: 'au_standard', name: 'Australia Standard (Tracked Secure Post)', price: 15.00, destination: 'Australia' },
+  { id: 'au_express', name: 'Australia Express (Overnight Priority Courier)', price: 25.00, destination: 'Australia' }
 ];
 
 export default function CheckoutPage() {
@@ -192,8 +185,8 @@ export default function CheckoutPage() {
             {/* Shipping Region Options */}
             <div>
               <h2 className="text-2xl font-bold text-banknote-navy mb-4 border-b border-slate-200 pb-2">Select Shipping Destination & Method</h2>
-              <p className="text-xs text-slate-500 mb-4 font-medium uppercase tracking-wider bg-slate-100 p-2.5 rounded border border-slate-250">
-                We safely ship to United Kingdom, Europe, Ireland, New Zealand, & Worldwide in double vacuum stealth packaging.
+              <p className="text-xs text-slate-500 mb-4 font-medium uppercase tracking-wider bg-slate-100 p-2.5 rounded border border-slate-250 font-bold text-emerald-800">
+                Notice: We ship exclusively within Australia. All orders are packed in double vacuum stealth packaging for maximum on-set privacy and security.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {shippingMethods.map((method) => {

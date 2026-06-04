@@ -29,7 +29,7 @@ export default function FAQPage() {
     },
     {
       question: "Do you sell internationally?",
-      answer: "Yes, we ship globally. However, the buyer is responsible for understanding the legalities of importing and possessing reproduction currency in their own jurisdiction."
+      answer: "No, we ship exclusively within Australia. This ensures extreme physical security, rapid transit, and precise alignment with standard local compliance regulations."
     }
   ];
 

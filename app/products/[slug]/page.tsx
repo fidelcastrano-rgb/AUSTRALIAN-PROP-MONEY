@@ -130,7 +130,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
                 </div>
                 <div className="flex items-center text-sm text-slate-700 font-medium">
                   <Truck className="w-5 h-5 text-banknote-navy mr-3" />
-                  <span>Express Dispatch Available Worldwide</span>
+                  <span>Express Dispatch Within Australia Only</span>
                 </div>
               </div>
 
@@ -168,7 +168,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
               <h3 className="font-bold text-lg mb-4 text-banknote-navy">Shipping & Returns</h3>
                <ul className="list-disc pl-5 space-y-2 text-slate-600 font-medium">
                 <li>Overnight Express available to major Australian cities</li>
-                <li>International shipping via DHL Express</li>
+                <li>Local shipping only within Australia via Australia Post</li>
                 <li>Discreet, secure packaging</li>
                 <li>Returns accepted within 14 days (must be unused/unopened)</li>
               </ul>

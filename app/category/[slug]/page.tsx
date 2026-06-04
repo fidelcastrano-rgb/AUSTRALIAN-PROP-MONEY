@@ -203,23 +203,23 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
             </ul>
             <p className="text-slate-700 mb-8">Attempting to use any fake currency in vending machines, ATMs, or stores is a federal crime with serious prison consequences. Our props exist solely for camera authenticity, not financial deception.</p>
 
-            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Do You Ship to the UK?</h4>
-            <p className="text-slate-700 mb-4">Yes. We ship our Euro props globally, including to:</p>
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Do You Ship Internationally?</h4>
+            <p className="text-slate-700 mb-4">No. We currently only ship our prop money locally within Australia to ensure extremely fast delivery and strict compliance with local transport rules. We safely deliver to all Australian states and territories, including:</p>
             <ul className="list-disc pl-6 mb-4 text-slate-700 space-y-2">
-              <li>United Kingdom (UK)</li>
-              <li>United States (USA)</li>
-              <li>European Union countries</li>
-              <li>Canada, Australia, New Zealand</li>
-              <li>Africa (including Cameroon/Douala region)</li>
-              <li>Asia, South America, and the Middle East</li>
+              <li>New South Wales (NSW - Sydney, Newcastle)</li>
+              <li>Victoria (VIC - Melbourne, Geelong)</li>
+              <li>Queensland (QLD - Brisbane, Gold Coast)</li>
+              <li>Western Australia (WA - Perth)</li>
+              <li>South Australia (SA - Adelaide)</li>
+              <li>Tasmania, Australian Capital Territory, and Northern Territory</li>
             </ul>
-            <p className="text-slate-700 mb-8">Many international clients pair our Euro props with our fake UK pound notes and Swiss Franc Prop Banknotes for international travel scenes, airport sequences, money exchange scenes, and training simulations.</p>
+            <p className="text-slate-700 mb-8">Many local clients pair our Euro props with other international prop bills for scenes filmed directly inside Australia.</p>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">How Long Does Shipping Take?</h4>
             <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
-              <li>Standard shipping: 7–14 business days globally</li>
-              <li>Express shipping: 3–5 business days to UK/USA/EU</li>
-              <li>Rush production: Available for urgent film deadlines (contact us)</li>
+              <li>Standard local shipping: 3–5 business days within Australia</li>
+              <li>Express local shipping: Overnight to 2 business days to major Australian metro areas</li>
+              <li>Rush production: Available for urgent film deadlines (contact us via WhatsApp)</li>
             </ul>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Can I Customize Denominations or Create Custom Stacks?</h4>
