@@ -2,8 +2,8 @@ export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Australian Prop Money',
-  url: 'https://australianpropmoney.com.au',
-  logo: 'https://australianpropmoney.com.au/logo.png',
+  url: 'https://australianpropsmoney.com',
+  logo: 'https://australianpropsmoney.com/logo.png',
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+447341056054',
@@ -17,9 +17,9 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Australian Prop Money',
-  image: 'https://australianpropmoney.com.au/storefront.jpg',
-  '@id': 'https://australianpropmoney.com.au',
-  url: 'https://australianpropmoney.com.au',
+  image: 'https://australianpropsmoney.com/storefront.jpg',
+  '@id': 'https://australianpropsmoney.com',
+  url: 'https://australianpropsmoney.com',
   telephone: '+447341056054',
   address: {
     '@type': 'PostalAddress',
@@ -52,10 +52,10 @@ export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Australian Prop Money',
-  url: 'https://australianpropmoney.com.au/',
+  url: 'https://australianpropsmoney.com/',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://australianpropmoney.com.au/search?q={search_term_string}',
+    target: 'https://australianpropsmoney.com/search?q={search_term_string}',
     'query-input': 'required name=search_term_string'
   }
 };

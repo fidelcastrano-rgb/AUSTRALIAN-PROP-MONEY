@@ -50,7 +50,7 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
               description: p.description,
               image: p.image,
               price: p.price,
-              url: `https://australianpropmoney.com.au/products/${p.slug}`
+              url: `https://australianpropsmoney.com/products/${p.slug}`
             })),
           }}
         />

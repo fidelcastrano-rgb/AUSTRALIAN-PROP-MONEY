@@ -49,7 +49,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
             description: product.description,
             image: product.image,
             price: product.price,
-            url: `https://australianpropmoney.com.au/products/${product.slug}`
+            url: `https://australianpropsmoney.com/products/${product.slug}`
           })),
         }}
       />

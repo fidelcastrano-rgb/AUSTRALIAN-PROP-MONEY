@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Australian Prop Money',
     description: 'Premium Australian-style prop notes for film production, photography, theatre, training simulations and creative projects.',
-    url: 'https://australianpropmoney.com.au',
+    url: 'https://australianpropsmoney.com',
     siteName: 'Australian Prop Money',
     locale: 'en_AU',
     type: 'website',
