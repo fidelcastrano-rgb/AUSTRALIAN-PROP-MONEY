@@ -132,7 +132,7 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
           <div className="col-span-1 md:col-span-4 mt-16 bg-white border border-slate-200 rounded-2xl p-8 lg:p-12 prose prose-slate max-w-none">
             <h2 className="text-3xl font-black text-banknote-navy mb-6">Why Our Euro Props Are Undetectable on Camera</h2>
             <p className="text-lg text-slate-700 mb-8">
-              We define undetectable by visual standards—meaning our props appear completely authentic when filmed with professional cameras under studio lighting. When you purchase our Euro props, you're receiving a premium product engineered with three layers of realism specifically for film, television, and photography production:
+              We define undetectable by visual standards—meaning our props appear completely authentic when filmed with professional cameras under studio lighting. When you purchase our Euro props, you&apos;re receiving a premium product engineered with three layers of realism specifically for film, television, and photography production:
             </p>
 
             <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Three Layers of Photorealistic Detail</h3>
@@ -194,7 +194,7 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
             <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Frequently Asked Questions</h3>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Can I Buy Real Counterfeit Money Online That Works in Vending Machines?</h4>
-            <p className="text-slate-700 mb-4">No—and you shouldn't try. Our notes are for visual use only. They do not contain:</p>
+            <p className="text-slate-700 mb-4">No—and you shouldn&apos;t try. Our notes are for visual use only. They do not contain:</p>
             <ul className="list-disc pl-6 mb-4 text-slate-700 space-y-2">
               <li>Magnetic ink required by currency validators</li>
               <li>Conductive properties needed for machine detection</li>

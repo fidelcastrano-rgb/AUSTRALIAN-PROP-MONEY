@@ -135,7 +135,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
               </div>
 
               <div className="mt-auto border-t border-slate-200 pt-8">
-                <ProductDetailAddToCart product={{ id: product.id, name: product.name, price: product.price, image: product.image }} />
+                <ProductDetailAddToCart product={{ id: product.id, name: product.name, price: product.price, image: product.image, slug: product.slug, variations: product.variations }} />
               </div>
               
               {/* Compliance Warning on Product Level */}

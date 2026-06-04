@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Search, ShoppingCart, ChevronDown } from 'lucide-react';
 import { useCart } from '@/components/shared/CartProvider';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { cartCount } = useCart();
+  const pathname = usePathname();
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-[36px] sm:top-[40px] z-40">
@@ -28,8 +30,11 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-wide text-slate-600">
-            <Link href="/products" className="text-banknote-green border-b-2 border-banknote-green pb-1 hover:text-banknote-green transition-colors">
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-wide">
+            <Link href="/" className={`pb-1 transition-colors hover:text-banknote-green ${pathname === '/' ? 'text-banknote-green border-b-2 border-banknote-green' : 'text-slate-600'}`}>
+              Home
+            </Link>
+            <Link href="/products" className={`pb-1 transition-colors hover:text-banknote-green ${pathname?.startsWith('/products') ? 'text-banknote-green border-b-2 border-banknote-green' : 'text-slate-600'}`}>
               Products
             </Link>
             <div className="relative group">
@@ -45,13 +50,16 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <Link href="/about" className="text-slate-600 hover:text-banknote-green transition-colors">
+            <Link href="/about" className={`pb-1 transition-colors hover:text-banknote-green ${pathname === '/about' ? 'text-banknote-green border-b-2 border-banknote-green' : 'text-slate-600'}`}>
               About
             </Link>
-            <Link href="/faq" className="text-slate-600 hover:text-banknote-green transition-colors">
+            <Link href="/faq" className={`pb-1 transition-colors hover:text-banknote-green ${pathname === '/faq' ? 'text-banknote-green border-b-2 border-banknote-green' : 'text-slate-600'}`}>
               FAQ
             </Link>
-            <Link href="/contact" className="text-slate-600 hover:text-banknote-green transition-colors">
+            <Link href="/blog" className={`pb-1 transition-colors hover:text-banknote-green ${pathname?.startsWith('/blog') ? 'text-banknote-green border-b-2 border-banknote-green' : 'text-slate-600'}`}>
+              Blog
+            </Link>
+            <Link href="/contact" className={`pb-1 transition-colors hover:text-banknote-green ${pathname === '/contact' ? 'text-banknote-green border-[#059669]' : 'text-slate-600'}`}>
               Contact
             </Link>
           </nav>
@@ -99,6 +107,7 @@ export default function Header() {
             <Link href="/category/euro" className="block px-3 py-3 text-base font-medium text-gray-600 border-b border-gray-50 pl-6" onClick={() => setIsMobileMenuOpen(false)}>Euro</Link>
             <Link href="/about" className="block px-3 py-3 text-base font-medium text-gray-900 border-b border-gray-50" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
             <Link href="/faq" className="block px-3 py-3 text-base font-medium text-gray-900 border-b border-gray-50" onClick={() => setIsMobileMenuOpen(false)}>FAQ</Link>
+            <Link href="/blog" className="block px-3 py-3 text-base font-medium text-gray-900 border-b border-gray-50" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
             <Link href="/contact" className="block px-3 py-3 text-base font-medium text-gray-900" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>

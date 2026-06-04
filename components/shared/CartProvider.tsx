@@ -1,9 +1,13 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { getDiscountedUnitPrice } from '@/lib/utils';
 
 export type CartItem = {
   id: string;
+  productId?: string;
+  variationName?: string;
+  slug?: string;
   name: string;
   price: number | string;
   image: string;
@@ -27,6 +31,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const savedCart = localStorage.getItem('prop-money-cart');
     if (savedCart) {
@@ -72,7 +77,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const clearCart = () => setItems([]);
 
-  const cartTotal = items.reduce((total, item) => total + Number(item.price) * item.quantity, 0);
+  const cartTotal = items.reduce((total, item) => total + getDiscountedUnitPrice(item.price, item.quantity) * item.quantity, 0);
   const cartCount = items.reduce((count, item) => count + item.quantity, 0);
 
   // Avoid hydration mismatch by returning empty structure during SSR

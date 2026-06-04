@@ -4,6 +4,7 @@ import { useCart } from '@/components/shared/CartProvider';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Trash2, ArrowRight, ShoppingBag } from 'lucide-react';
+import { getDiscountedUnitPrice, getDiscountPercentage } from '@/lib/utils';
 
 export default function CartPage() {
   const { items, updateQuantity, removeFromCart, cartTotal, cartCount } = useCart();
@@ -41,67 +42,106 @@ export default function CartPage() {
               </div>
               
               <div className="divide-y divide-slate-100">
-                {items.map((item) => (
-                  <div key={item.id} className="p-4 md:p-6 flex flex-col md:grid md:grid-cols-12 md:gap-4 md:items-center">
-                    {/* Mobile layout */}
-                    <div className="md:hidden flex items-start gap-4 mb-4">
-                      <div className="relative w-20 h-20 bg-slate-100 rounded-md overflow-hidden shrink-0">
-                        <Image src={item.image} alt={item.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                {items.map((item) => {
+                  const discount = getDiscountPercentage(item.quantity);
+                  const basePrice = Number(item.price);
+                  const discountedPrice = getDiscountedUnitPrice(item.price, item.quantity);
+
+                  return (
+                    <div key={item.id} className="p-4 md:p-6 flex flex-col md:grid md:grid-cols-12 md:gap-4 md:items-center">
+                      {/* Mobile layout */}
+                      <div className="md:hidden flex items-start gap-4 mb-4">
+                        <div className="relative w-20 h-20 bg-slate-100 rounded-md overflow-hidden shrink-0">
+                          <Image src={item.image} alt={item.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                        </div>
+                        <div className="flex-1">
+                          <Link href={`/products/${item.slug || item.id}`} className="font-bold text-banknote-navy hover:text-banknote-green block text-base leading-tight mb-1">
+                            {item.name}
+                          </Link>
+                          {item.variationName && (
+                            <span className="block text-xs font-bold text-slate-500 mb-2 uppercase bg-slate-100 py-0.5 px-2 rounded w-fit">
+                              Size: {item.variationName}
+                            </span>
+                          )}
+                          {discount > 0 ? (
+                            <div className="flex flex-col">
+                              <span className="text-xs text-red-500 font-bold">Bulk Discount ({discount}% Off)</span>
+                              <div className="flex items-center gap-1.5 mt-0.5">
+                                <span className="font-bold text-banknote-green">${discountedPrice.toFixed(2)}</span>
+                                <span className="text-xs text-slate-400 line-through">${basePrice.toFixed(2)}</span>
+                              </div>
+                            </div>
+                          ) : (
+                            <span className="font-bold text-slate-900">${basePrice.toFixed(2)}</span>
+                          )}
+                        </div>
+                        <button onClick={() => removeFromCart(item.id)} className="text-slate-400 hover:text-red-500 p-2" aria-label="Remove item">
+                          <Trash2 className="w-5 h-5" />
+                        </button>
                       </div>
-                      <div className="flex-1">
-                        <Link href={`/products/${item.id}`} className="font-bold text-banknote-navy hover:text-banknote-green block text-base leading-tight mb-2">
-                          {item.name}
-                        </Link>
-                        <span className="font-bold text-slate-900">${item.price}</span>
+
+                      {/* Desktop layout product cell */}
+                      <div className="hidden md:flex md:col-span-6 items-center gap-4">
+                        <button onClick={() => removeFromCart(item.id)} className="text-slate-400 hover:text-red-500 p-1" aria-label="Remove item">
+                          <Trash2 className="w-5 h-5" />
+                        </button>
+                        <div className="relative w-20 h-20 bg-slate-100 rounded-md overflow-hidden shrink-0 border border-slate-200">
+                          <Image src={item.image} alt={item.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                        </div>
+                        <div className="flex flex-col">
+                          <Link href={`/products/${item.slug || item.id}`} className="font-bold text-banknote-navy hover:text-banknote-green block text-base leading-snug">
+                            {item.name}
+                          </Link>
+                          {item.variationName && (
+                            <span className="block text-[11px] font-extrabold text-slate-500 mt-1 uppercase bg-slate-100/80 py-0.5 px-2 rounded w-fit">
+                              Size: {item.variationName}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                      <button onClick={() => removeFromCart(item.id)} className="text-slate-400 hover:text-red-500 p-2" aria-label="Remove item">
-                        <Trash2 className="w-5 h-5" />
-                      </button>
-                    </div>
 
-                    {/* Desktop layout product cell */}
-                    <div className="hidden md:flex md:col-span-6 items-center gap-4">
-                      <button onClick={() => removeFromCart(item.id)} className="text-slate-400 hover:text-red-500 p-1" aria-label="Remove item">
-                        <Trash2 className="w-5 h-5" />
-                      </button>
-                      <div className="relative w-20 h-20 bg-slate-100 rounded-md overflow-hidden shrink-0 border border-slate-200">
-                        <Image src={item.image} alt={item.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                      {/* Desktop price cell */}
+                      <div className="hidden md:flex md:flex-col md:col-span-2 text-center items-center justify-center">
+                        {discount > 0 ? (
+                          <>
+                            <span className="text-[10px] text-red-500 font-extrabold uppercase leading-none mb-1">({discount}% Off)</span>
+                            <div className="flex flex-col md:flex-row md:items-center gap-1">
+                              <span className="font-bold text-banknote-green">${discountedPrice.toFixed(2)}</span>
+                              <span className="text-xs text-slate-400 line-through">${basePrice.toFixed(2)}</span>
+                            </div>
+                          </>
+                        ) : (
+                          <span className="font-bold text-slate-900">${basePrice.toFixed(2)}</span>
+                        )}
                       </div>
-                      <Link href={`/products/${item.id}`} className="font-bold text-banknote-navy hover:text-banknote-green block text-base">
-                        {item.name}
-                      </Link>
-                    </div>
 
-                    {/* Desktop price cell */}
-                    <div className="hidden md:block md:col-span-2 text-center font-bold text-slate-900">
-                      ${Number(item.price)}
-                    </div>
+                      {/* Quantity cell (Mobile & Desktop) */}
+                      <div className="md:col-span-2 flex items-center justify-between md:justify-center mt-2 md:mt-0">
+                        <span className="md:hidden font-bold text-sm text-slate-500 uppercase">Quantity:</span>
+                        <div className="flex items-center border border-slate-300 rounded bg-slate-50 overflow-hidden">
+                          <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-3 py-1.5 text-slate-500 hover:text-banknote-navy hover:bg-slate-200 transition-colors font-black">-</button>
+                          <span className="px-3 py-1.5 font-bold text-slate-900 text-sm border-x border-slate-200 min-w-[2.5rem] text-center">{item.quantity}</span>
+                          <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-3 py-1.5 text-slate-500 hover:text-banknote-navy hover:bg-slate-200 transition-colors font-black">+</button>
+                        </div>
+                      </div>
 
-                    {/* Quantity cell (Mobile & Desktop) */}
-                    <div className="md:col-span-2 flex items-center justify-between md:justify-center mt-2 md:mt-0">
-                      <span className="md:hidden font-bold text-sm text-slate-500 uppercase">Quantity:</span>
-                      <div className="flex items-center border border-slate-300 rounded bg-slate-50 overflow-hidden">
-                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-3 py-1.5 text-slate-500 hover:text-banknote-navy hover:bg-slate-200 transition-colors font-black">-</button>
-                        <span className="px-3 py-1.5 font-bold text-slate-900 text-sm border-x border-slate-200 min-w-[2.5rem] text-center">{item.quantity}</span>
-                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-3 py-1.5 text-slate-500 hover:text-banknote-navy hover:bg-slate-200 transition-colors font-black">+</button>
+                      {/* Desktop subtotal cell */}
+                      <div className="hidden md:block md:col-span-2 text-right font-black text-banknote-green">
+                        ${(discountedPrice * item.quantity).toFixed(2)}
+                      </div>
+
+                      {/* Mobile subtotal */}
+                      <div className="md:hidden flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+                        <span className="font-bold text-sm text-slate-500 uppercase">Subtotal:</span>
+                        <span className="font-black text-banknote-green">${(discountedPrice * item.quantity).toFixed(2)}</span>
                       </div>
                     </div>
-
-                    {/* Desktop subtotal cell */}
-                    <div className="hidden md:block md:col-span-2 text-right font-black text-banknote-green">
-                      ${(Number(item.price) * item.quantity).toFixed(2)}
-                    </div>
-
-                     {/* Mobile subtotal */}
-                     <div className="md:hidden flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-                       <span className="font-bold text-sm text-slate-500 uppercase">Subtotal:</span>
-                       <span className="font-black text-banknote-green">${(Number(item.price) * item.quantity).toFixed(2)}</span>
-                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
+
 
           <div className="w-full lg:w-[400px]">
             <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 sticky top-28">

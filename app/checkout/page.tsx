@@ -3,12 +3,27 @@
 import { useState } from 'react';
 import { useCart } from '@/components/shared/CartProvider';
 import Link from 'next/link';
+import { getDiscountedUnitPrice } from '@/lib/utils';
+
+const shippingMethods = [
+  { id: 'uk_standard', name: 'United Kingdom Standard (Tracked Secure Post)', price: 25.00, destination: 'United Kingdom' },
+  { id: 'uk_express', name: 'United Kingdom Express (Overnight Courier)', price: 45.00, destination: 'United Kingdom' },
+  { id: 'eu_standard', name: 'Europe Standard (Priority Tracked Delivery)', price: 30.00, destination: 'Europe' },
+  { id: 'eu_express', name: 'Europe Premium (Express Courier DHL/FedEx)', price: 55.00, destination: 'Europe' },
+  { id: 'ie_standard', name: 'Ireland Standard (Registered Postal)', price: 25.00, destination: 'Ireland' },
+  { id: 'ie_express', name: 'Ireland Express (Priority Overnight Courier)', price: 49.00, destination: 'Ireland' },
+  { id: 'nz_standard', name: 'New Zealand Standard (Tracked Airmail)', price: 35.00, destination: 'New Zealand' },
+  { id: 'nz_express', name: 'New Zealand Priority (Premium DHL Express)', price: 65.00, destination: 'New Zealand' },
+  { id: 'intl_express', name: 'International Worldwide (Super Stealth Tracked)', price: 40.00, destination: 'Rest of World' }
+];
 
 export default function CheckoutPage() {
   const { items, cartTotal, clearCart } = useCart();
   const [paymentMethod, setPaymentMethod] = useState('crypto');
+  const [selectedShipping, setSelectedShipping] = useState(shippingMethods[0]);
+  const [submitType, setSubmitType] = useState<'whatsapp' | 'email'>('whatsapp');
   
-  // Example form state
+  // Form state
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
   const [email, setEmail] = useState('');
@@ -22,6 +37,8 @@ export default function CheckoutPage() {
     setPaymentMethod('crypto');
   }
 
+  const grandTotal = cartTotal + selectedShipping.price;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (items.length === 0) {
@@ -29,12 +46,55 @@ export default function CheckoutPage() {
       return;
     }
     
-    // Construct WhatsApp message
-    const itemsList = items.map(i => `${i.quantity}x ${i.name} ($${i.price})`).join('%0A');
-    const message = `*New Order*%0A%0A*Items:*%0A${itemsList}%0A%0A*Total:* $${cartTotal.toFixed(2)}%0A*Payment Method:* ${paymentMethod}%0A%0A*Shipping Info:*%0A${first} ${last}%0A${email}%0A${phone}%0A${address}`;
-    window.open(`https://wa.me/33753827675?text=${message}`, '_blank');
+    if (submitType === 'whatsapp') {
+      // Construct WhatsApp message
+      const itemsList = items.map(i => {
+        const discountedUnit = getDiscountedUnitPrice(i.price, i.quantity);
+        const varText = i.variationName ? ` [${i.variationName}]` : '';
+        return `- ${i.quantity}x ${i.name}${varText} (@$${discountedUnit.toFixed(2)}/pkg = $${(discountedUnit * i.quantity).toFixed(2)})`;
+      }).join('%0A');
+
+      const message = `*New Order details*%0A%0A` +
+        `*Items purchased:*%0A${itemsList}%0A%0A` +
+        `*Goods Subtotal:* $${cartTotal.toFixed(2)}%0A` +
+        `*Shipping Destination:* ${selectedShipping.destination}%0A` +
+        `*Shipping Method:* ${selectedShipping.name} ($${selectedShipping.price.toFixed(2)})%0A` +
+        `*Grand Total:* $${grandTotal.toFixed(2)}%0A` +
+        `*Preferred Payment:* ${paymentMethod === 'crypto' ? 'Cryptocurrency' : paymentMethod === 'bank' ? 'Bank Transfer' : 'Credit Card'}%0A%0A` +
+        `*Contact/Delivery details:*%0A` +
+        `Name: ${first} ${last}%0A` +
+        `Email: ${email}%0A` +
+        `Phone/WhatsApp: ${phone}%0A` +
+        `Shipping Address: ${address}`;
+
+      window.open(`https://wa.me/33753827675?text=${message}`, '_blank');
+    } else {
+      // Construct Email message
+      const itemsListText = items.map(i => {
+        const discountedUnit = getDiscountedUnitPrice(i.price, i.quantity);
+        const varText = i.variationName ? ` [${i.variationName}]` : '';
+        return `- ${i.quantity}x ${i.name}${varText} (@$${discountedUnit.toFixed(2)}/pkg = $${(discountedUnit * i.quantity).toFixed(2)})`;
+      }).join('\n');
+
+      const emailSubject = `New Prop Money Order from ${first} ${last}`;
+      const emailBody = `New Order details\n\n` +
+        `Items purchased:\n${itemsListText}\n\n` +
+        `Goods Subtotal: $${cartTotal.toFixed(2)}\n` +
+        `Shipping Destination: ${selectedShipping.destination}\n` +
+        `Shipping Method: ${selectedShipping.name} ($${selectedShipping.price.toFixed(2)})\n` +
+        `Grand Total: $${grandTotal.toFixed(2)}\n` +
+        `Preferred Payment: ${paymentMethod === 'crypto' ? 'Cryptocurrency' : paymentMethod === 'bank' ? 'Bank Transfer' : 'Credit Card'}\n\n` +
+        `Contact/Delivery details:\n` +
+        `Name: ${first} ${last}\n` +
+        `Email: ${email}\n` +
+        `Phone/WhatsApp: ${phone}\n` +
+        `Shipping Address: ${address}`;
+
+      const mailtoUrl = `mailto:info@propcounterfeitnotes.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoUrl;
+    }
     
-    // Can also submit a real form via api route, empty cart
+    // Empty cart post-handoff
     clearCart();
   };
 
@@ -64,16 +124,41 @@ export default function CheckoutPage() {
               <h2 className="text-lg font-bold text-banknote-navy mb-4 border-b border-slate-200 pb-2">Order Summary</h2>
               
               <ul className="mb-4 space-y-2">
-                {items.map(item => (
-                  <li key={item.id} className="flex justify-between text-sm text-slate-700">
-                    <span>{item.quantity} × {item.name}</span>
-                    <span className="font-bold">${(Number(item.price) * item.quantity).toFixed(2)}</span>
-                  </li>
-                ))}
+                {items.map(item => {
+                  const itemUnitPrice = getDiscountedUnitPrice(item.price, item.quantity);
+                  const isDiscounted = itemUnitPrice < Number(item.price);
+
+                  return (
+                    <li key={item.id} className="flex justify-between text-sm text-slate-700">
+                      <div className="flex flex-col">
+                        <span className="font-bold">{item.quantity} × {item.name}</span>
+                        {item.variationName && (
+                          <span className="text-xs text-slate-500 font-semibold italic">Size: {item.variationName}</span>
+                        )}
+                        {isDiscounted && (
+                          <span className="text-[10px] font-bold text-red-500 uppercase mt-0.5">Bulk wholesale rate configured</span>
+                        )}
+                      </div>
+                      <span className="font-bold text-slate-900">${(itemUnitPrice * item.quantity).toFixed(2)}</span>
+                    </li>
+                  );
+                })}
               </ul>
-              <div className="flex justify-between items-center pt-2 border-t border-slate-200">
+
+              <div className="border-t border-slate-200 pt-3 space-y-2">
+                <div className="flex justify-between items-center text-sm text-slate-600">
+                  <span>Subtotal:</span>
+                  <span>${cartTotal.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between items-center text-sm text-slate-600">
+                  <span>Selected Shipping rate:</span>
+                  <span>+${selectedShipping.price.toFixed(2)} ({selectedShipping.destination})</span>
+                </div>
+              </div>
+
+              <div className="flex justify-between items-center pt-3 border-t border-slate-200 mt-3">
                 <span className="text-slate-900 font-bold">Total:</span>
-                <span className="text-banknote-green font-black text-xl">${cartTotal.toFixed(2)}</span>
+                <span className="text-banknote-green font-black text-2xl">${grandTotal.toFixed(2)}</span>
               </div>
             </div>
 
@@ -101,6 +186,45 @@ export default function CheckoutPage() {
                   <label className="block text-sm font-medium text-slate-700 mb-1">Shipping Address</label>
                   <textarea required value={address} onChange={e => setAddress(e.target.value)} rows={3} className="w-full border border-slate-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-banknote-green focus:border-transparent"></textarea>
                 </div>
+              </div>
+            </div>
+
+            {/* Shipping Region Options */}
+            <div>
+              <h2 className="text-2xl font-bold text-banknote-navy mb-4 border-b border-slate-200 pb-2">Select Shipping Destination & Method</h2>
+              <p className="text-xs text-slate-500 mb-4 font-medium uppercase tracking-wider bg-slate-100 p-2.5 rounded border border-slate-250">
+                We safely ship to United Kingdom, Europe, Ireland, New Zealand, & Worldwide in double vacuum stealth packaging.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {shippingMethods.map((method) => {
+                  const isSelected = selectedShipping.id === method.id;
+                  return (
+                    <label 
+                      key={method.id} 
+                      className={`flex items-start p-3 border rounded-lg cursor-pointer transition-all ${
+                        isSelected 
+                          ? 'border-banknote-green bg-emerald-50/50 shadow-sm ring-1 ring-banknote-green' 
+                          : 'border-slate-200 hover:bg-slate-50'
+                      }`}
+                    >
+                      <input 
+                        type="radio" 
+                        name="shipping_method" 
+                        value={method.id} 
+                        checked={isSelected}
+                        onChange={() => setSelectedShipping(method)}
+                        className="mt-1 text-banknote-green focus:ring-banknote-green shrink-0"
+                      />
+                      <div className="ml-3">
+                        <span className="block text-xs font-bold text-slate-900 leading-snug">{method.name}</span>
+                        <span className="block text-sm font-black text-banknote-green mt-1">${method.price.toFixed(2)}</span>
+                        <span className="inline-block text-[10px] font-bold uppercase py-0.5 px-2 bg-slate-100 text-slate-600 rounded-full mt-1.5 border border-slate-200">
+                          {method.destination}
+                        </span>
+                      </div>
+                    </label>
+                  );
+                })}
               </div>
             </div>
 
@@ -173,12 +297,33 @@ export default function CheckoutPage() {
               )}
             </div>
 
-            <div className="pt-6">
-              <button type="submit" className="w-full bg-banknote-navy hover:bg-banknote-green text-white font-bold py-4 px-8 rounded-md transition-colors text-lg shadow-lg uppercase tracking-wider">
-                Place Order via WhatsApp
-              </button>
-              <p className="text-center text-sm text-slate-500 mt-4">
-                Orders can also be placed directly via <a href="mailto:info@propcounterfeitnotes.com" className="text-banknote-green hover:underline font-bold">Email</a> or <a href="https://wa.me/33753827675" className="text-banknote-green hover:underline font-bold" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+            <div className="pt-6 space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button 
+                  type="submit" 
+                  onClick={() => setSubmitType('whatsapp')}
+                  className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-black py-4 px-6 rounded-xl transition-all text-base shadow-md uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-lg active:scale-[0.99] cursor-pointer"
+                >
+                  <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.896 0c3.181.001 6.171 1.242 8.425 3.499 2.253 2.257 3.491 5.253 3.488 8.435-.006 6.571-5.33 11.895-11.898 11.895-1.99-.001-3.94-.502-5.67-1.458L0 24zm6.071-4.713c1.649.979 3.26 1.488 5.093 1.489 5.378 0 9.754-4.364 9.758-9.735.002-2.599-1.01-5.048-2.852-6.892-1.842-1.846-4.292-2.862-6.883-2.863-5.388 0-9.761 4.366-9.766 9.739-.001 1.905.5 3.754 1.453 5.362l-.954 3.483 3.564-.936zM17.13 14.88c-.287-.144-1.701-.84-1.964-.936-.263-.096-.454-.144-.645.144-.191.288-.741.936-.908 1.127-.168.19-.335.216-.622.072-.287-.144-1.212-.447-2.309-1.425-.853-.762-1.43-1.702-1.597-1.99-.168-.288-.018-.444.125-.587.13-.129.288-.336.431-.504.144-.168.191-.288.287-.48.096-.192.048-.361-.024-.504-.072-.144-.645-1.554-.884-2.128-.233-.559-.47-.482-.645-.491l-.551-.008c-.191 0-.501.072-.763.36-.263.288-1.002.979-1.002 2.388 0 1.41 1.026 2.769 1.169 2.961.144.192 2.02 3.085 4.894 4.329.684.296 1.219.473 1.637.605.687.218 1.313.187 1.808.113.551-.082 1.701-.696 1.94-.368.239-.624.239-1.152.167-1.248-.072-.096-.263-.144-.551-.288z" />
+                  </svg>
+                  Order via WhatsApp
+                </button>
+
+                <button 
+                  type="submit" 
+                  onClick={() => setSubmitType('email')}
+                  className="w-full bg-banknote-navy hover:bg-banknote-green text-white font-black py-4 px-6 rounded-xl transition-all text-base shadow-md uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-lg active:scale-[0.99] cursor-pointer"
+                >
+                  <svg className="w-5 h-5 fill-none stroke-current stroke-2 shrink-0" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  Order via Email
+                </button>
+              </div>
+              <p className="text-center text-xs text-slate-500 pt-2 font-semibold">
+                By placing an order, you agree to our terms of compliance and reproduction rules.
               </p>
             </div>
           </form>
