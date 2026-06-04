@@ -248,6 +248,91 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
           </div>
         )}
 
+        {category.slug === 'canadian-dollars' && (
+          <div className="col-span-1 md:col-span-4 mt-16 bg-white border border-slate-200 rounded-2xl p-8 lg:p-12 prose prose-slate max-w-none">
+            <h2 className="text-3xl font-black text-banknote-navy mb-6">Why Our Canadian Dollar Props Are Undetectable on Camera</h2>
+            <p className="text-lg text-slate-700 mb-8">
+              We define undetectable by visual standards—meaning our props appear completely authentic when filmed with professional cameras under studio lighting. When you purchase our Canadian Dollar props, you&apos;re receiving a premium product engineered with three layers of realism specifically for film, television, and photography production:
+            </p>
+
+            <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Three Layers of Polymer-Style Realism</h3>
+            
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">1. Semi-Translucent Polymer Windows</h4>
+            <p className="text-slate-700 mb-6">
+              Modern Canadian dollars are printed on polymer substrate with a translucent window. Our props mimic this iconic feature by utilizing custom matte window overlays that match the frosted look and physical feel of the real bills, ensuring high visual realism on close-up shots.
+            </p>
+
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">2. Color-Spectrum Fidelity</h4>
+            <p className="text-slate-700 mb-6">
+              Each denomination (from the bright blue $5 to the rich bronze $100) has been meticulously scanned and color-calibrated to perfectly match the official Frontier Polymer Series. Camera exposure registers the exact depth of hues under warm studio spotlights and cool outdoor environments alike.
+            </p>
+
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">3. Matte, Glare-Free Substrate</h4>
+            <p className="text-slate-700 mb-6">
+              Our notes are printed on imported hybrid polymer-paper stock. Standard plastics reflect studio lights, creating dead white spots on camera. Our unique anti-glare finish absorbs light evenly, ensuring that details like micro-text and portrait engravings print crisp and legible at any distance.
+            </p>
+
+            <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Available CAD Denominations</h3>
+            <p className="text-slate-700 mb-4">We stock the full range of Canadian Dollar props to suit any script, budget, or collection requirement:</p>
+            
+            <ul className="space-y-4 mb-8">
+              <li className="flex flex-col">
+                <span className="font-bold text-banknote-navy">$5 and $10 CAD Bills</span>
+                <span className="text-slate-700">Perfect for cash register scenes, street vendor transactions, pocket change reveals, and everyday Canadian setting authenticity.</span>
+              </li>
+              <li className="flex flex-col">
+                <span className="font-bold text-banknote-navy">$20 and $50 CAD Stacks</span>
+                <span className="text-slate-700">The most requested items for high-stakes movie scenes, heist sequences, music videos, luxury lifestyle shots, and crime drama montages.</span>
+              </li>
+              <li className="flex flex-col">
+                <span className="font-bold text-banknote-navy">$100 CAD Stacks</span>
+                <span className="text-slate-700">Rare, high-value props for exclusive production needs, villain vault scenes, international crime syndicate portrayals, and maximum-impact visual moments.</span>
+              </li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Legal Usage & Safety Guidelines</h3>
+            
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Are These Prop Canadian Dollar Bills Legal to Own?</h4>
+            <p className="text-slate-700 mb-4">Yes. These items are strictly classified as motion picture props and novelty collectibles. They are completely legal to own for:</p>
+            <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
+              <li>Artistic purposes (film, television, theater productions)</li>
+              <li>Educational purposes (bank security training, law enforcement simulations)</li>
+              <li>Entertainment purposes (collectibles, photography, content creation)</li>
+              <li>Professional use (music videos, commercial advertising, social media content)</li>
+            </ul>
+
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Important Legal Disclaimer</h4>
+            <p className="text-slate-700 mb-4">While our props are visually realistic fake money, they are NOT legal tender under any circumstances:</p>
+            <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
+              <li>They are designed to fail all automated banking checks (ATM machines, cash validators, currency detectors)</li>
+              <li>They must never be used for purchases or attempted as real currency</li>
+              <li>They cannot be deposited into bank accounts</li>
+              <li>Using them fraudulently is illegal and carries severe criminal penalties</li>
+              <li>Each note includes clear compliance markings visible upon close inspection</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Frequently Asked Questions</h3>
+
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Can I Buy Real Counterfeit Money Online That Works in Vending Machines?</h4>
+            <p className="text-slate-700 mb-4">No—and you shouldn&apos;t try. Our notes are for visual use only. They do not contain any security features of actual Canadian currencies and will fail all electronic validators and scanners. Attempting to use any fake currency in vending machines, ATMs, or stores is a federal crime with serious prison consequences. Our props exist solely for camera authenticity, not financial deception.</p>
+
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Do You Ship Internationally?</h4>
+            <p className="text-slate-700 mb-4">No. We currently only ship our prop money locally within Australia to ensure extremely fast delivery and strict compliance with local transport rules. We safely deliver to all Australian states and territories, including New South Wales, Victoria, Queensland, Western Australia, South Australia, Tasmania, ACT, and NT.</p>
+
+            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">How Long Does Shipping Take?</h4>
+            <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
+              <li>Standard local shipping: 3–5 business days within Australia</li>
+              <li>Express local shipping: Overnight to 2 business days to major Australian metro areas</li>
+              <li>Rush production: Available for urgent film deadlines (contact us via WhatsApp)</li>
+            </ul>
+
+            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 text-sm text-slate-600">
+              <strong className="text-banknote-navy mb-2 block">Prop Money Usage Disclaimer:</strong>
+              This website and all products are intended solely for legitimate motion picture, television, educational, and novelty purposes. All purchasers agree to use these props in compliance with applicable laws and regulations.
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );

@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Search, ShoppingCart, ChevronDown } from 'lucide-react';
 import { useCart } from '@/components/shared/CartProvider';
+import LogoImage from '../../public/Australianpropmoney1.png';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,14 +20,15 @@ export default function Header() {
           
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-banknote-green rounded flex items-center justify-center text-white">
-                <span className="font-heading font-bold text-xl">$</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading text-xl font-black tracking-tight text-banknote-navy leading-none uppercase">Australian</span>
-                <span className="font-heading text-sm font-semibold tracking-widest text-banknote-green uppercase leading-tight">Prop Money</span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image 
+                src={LogoImage} 
+                alt="Australian Prop Money Logo" 
+                className="h-12 w-auto object-contain" 
+                priority
+                style={{ maxHeight: '48px', width: 'auto' }}
+                referrerPolicy="no-referrer"
+              />
             </Link>
           </div>
 
@@ -47,6 +50,7 @@ export default function Header() {
                   <Link href="/category/us-dollars" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-banknote-green-light hover:text-banknote-green">US Dollars</Link>
                   <Link href="/category/british-pounds" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-banknote-green-light hover:text-banknote-green">British Pounds</Link>
                   <Link href="/category/euro" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-banknote-green-light hover:text-banknote-green">Euro</Link>
+                  <Link href="/category/canadian-dollars" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-banknote-green-light hover:text-banknote-green">Canadian Dollars</Link>
                 </div>
               </div>
             </div>
@@ -105,6 +109,7 @@ export default function Header() {
             <Link href="/category/us-dollars" className="block px-3 py-3 text-base font-medium text-gray-600 border-b border-gray-50 pl-6" onClick={() => setIsMobileMenuOpen(false)}>US Dollars</Link>
             <Link href="/category/british-pounds" className="block px-3 py-3 text-base font-medium text-gray-600 border-b border-gray-50 pl-6" onClick={() => setIsMobileMenuOpen(false)}>British Pounds</Link>
             <Link href="/category/euro" className="block px-3 py-3 text-base font-medium text-gray-600 border-b border-gray-50 pl-6" onClick={() => setIsMobileMenuOpen(false)}>Euro</Link>
+            <Link href="/category/canadian-dollars" className="block px-3 py-3 text-base font-medium text-gray-600 border-b border-gray-50 pl-6" onClick={() => setIsMobileMenuOpen(false)}>Canadian Dollars</Link>
             <Link href="/about" className="block px-3 py-3 text-base font-medium text-gray-900 border-b border-gray-50" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
             <Link href="/faq" className="block px-3 py-3 text-base font-medium text-gray-900 border-b border-gray-50" onClick={() => setIsMobileMenuOpen(false)}>FAQ</Link>
             <Link href="/blog" className="block px-3 py-3 text-base font-medium text-gray-900 border-b border-gray-50" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>

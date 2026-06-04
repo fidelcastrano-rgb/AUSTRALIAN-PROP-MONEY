@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import LogoImage from '../../public/Australianpropmoney1.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,15 +13,15 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-banknote-green rounded flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-lg">$</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-xl text-banknote-navy uppercase tracking-tight leading-none">Australian</span>
-                <span className="font-heading font-semibold text-xs tracking-widest text-banknote-green uppercase leading-tight mt-0.5">Prop Money</span>
-              </div>
-            </div>
+            <Link href="/" className="inline-block">
+              <Image 
+                src={LogoImage} 
+                alt="Australian Prop Money Logo" 
+                className="h-10 w-auto object-contain" 
+                style={{ maxHeight: '40px', width: 'auto' }}
+                referrerPolicy="no-referrer"
+              />
+            </Link>
             <p className="text-sm leading-relaxed">
               Premium Australian-style prop notes designed exclusively for film production, photography, theatre, training simulations and creative projects.
             </p>
@@ -50,6 +52,7 @@ export default function Footer() {
               <li><Link href="/category/us-dollars" className="hover:text-banknote-green transition-colors text-sm font-semibold">US Dollars</Link></li>
               <li><Link href="/category/british-pounds" className="hover:text-banknote-green transition-colors text-sm font-semibold">British Pounds</Link></li>
               <li><Link href="/category/euro" className="hover:text-banknote-green transition-colors text-sm font-semibold">Euro</Link></li>
+              <li><Link href="/category/canadian-dollars" className="hover:text-banknote-green transition-colors text-sm font-semibold">Canadian Dollars</Link></li>
             </ul>
           </div>
 

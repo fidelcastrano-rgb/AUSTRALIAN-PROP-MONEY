@@ -26,6 +26,13 @@ export const categories = [
     slug: 'euro',
     description: 'European currency replicas with true-to-scale sizing and non-reflective finishes for optimal set lighting.',
     image: 'https://propcounterfeitnotes.com/public/upload/product/buy-500-euro-bills.226webp'
+  },
+  {
+    id: 'canadian-dollars',
+    name: 'Canadian Dollars',
+    slug: 'canadian-dollars',
+    description: 'Highly realistic replica Canadian polymer prop notes, designed for high-definition filming and complete local on-set compliance.',
+    image: '/images/canadian-dollars/cad-100.png'
   }
 ];
 
@@ -595,6 +602,148 @@ export const products = [
       { id: 'v3', name: '€2,500 EUR Face Value (500 Notes Prop Book)', price: '350.00' },
       { id: 'v4', name: '€5,000 EUR Face Value (1,000 Notes Prop Book)', price: '500.00' },
       { id: 'v5', name: '€12,500 EUR Face Value (2,500 Notes Prop Book)', price: '1000.00' }
+    ]
+  },
+
+  // Canadian Dollars
+  {
+    id: 'cad-5',
+    name: 'Buy Counterfeit $5 CAD Banknotes - High Quality Replica',
+    price: '150.00',
+    category: 'canadian-dollars',
+    categoryName: 'Canadian Dollars',
+    image: '/images/canadian-dollars/cad-5.png',
+    slug: 'buy-counterfeit-5-cad-banknotes',
+    description: 'Buy premium quality counterfeit $5 CAD banknotes online. Designed to replicate modern Canadian polymer banknotes with its signature blue color profile, Wilfrid Laurier portrait, and highly detailed translucent-look windows. Ideal for movie production, theater, training, and cashier education.',
+    features: [
+      'Vivid blue Frontier-series polymer color spectrum',
+      'True double-sided high-resolution color precision',
+      'Non-reflective matte finish perfect for camera sets',
+      'Wrapped in security bank straps of 100 individual notes'
+    ],
+    specifications: [
+      'Dimensions: 152.4mm x 69.85mm',
+      'Weight: 110g per stack',
+      'Material: Direct hybrid matte polymer-paper stock'
+    ],
+    variations: [
+      { id: 'v1', name: '$500 CAD Face Value (100 Notes Prop Book)', price: '150.00' },
+      { id: 'v2', name: '$1,500 CAD Face Value (300 Notes Prop Book)', price: '250.00' },
+      { id: 'v3', name: '$2,500 CAD Face Value (500 Notes Prop Book)', price: '350.00' },
+      { id: 'v4', name: '$5,000 CAD Face Value (1,000 Notes Prop Book)', price: '500.00' },
+      { id: 'v5', name: '$12,500 CAD Face Value (2,500 Notes Prop Book)', price: '1000.00' }
+    ]
+  },
+  {
+    id: 'cad-10',
+    name: 'Buy Counterfeit $10 CAD Banknotes - Premium Replica Bills',
+    price: '150.00',
+    category: 'canadian-dollars',
+    categoryName: 'Canadian Dollars',
+    image: '/images/canadian-dollars/cad-10.png',
+    slug: 'buy-counterfeit-10-cad-banknotes',
+    description: 'Order counterfeit Canadian $10 bills online. High-fidelity replica $10 CAD banknotes feature exact purple color spectrum formatting, John A. Macdonald layout detailing, and non-glossy, camera-ready texture overlays. Excellent for close-up angles on set.',
+    features: [
+      'Prismatic purple design and polymer-simulate texture',
+      'Double-sided printing with compliant safety markings',
+      '100 notes per bundle with bank-standard wrappers',
+      'Matte surface texture engineered to minimize spotlight reflection'
+    ],
+    specifications: [
+      'Dimensions: 152.4mm x 69.85mm',
+      'Weight: 110g per stack',
+      'Material: Direct hybrid matte polymer-paper stock'
+    ],
+    variations: [
+      { id: 'v1', name: '$1,000 CAD Face Value (100 Notes Prop Book)', price: '150.00' },
+      { id: 'v2', name: '$3,000 CAD Face Value (300 Notes Prop Book)', price: '250.00' },
+      { id: 'v3', name: '$5,000 CAD Face Value (500 Notes Prop Book)', price: '350.00' },
+      { id: 'v4', name: '$10,000 CAD Face Value (1,000 Notes Prop Book)', price: '500.00' },
+      { id: 'v5', name: '$25,000 CAD Face Value (2,500 Notes Prop Book)', price: '1000.00' }
+    ]
+  },
+  {
+    id: 'cad-20',
+    name: 'Buy Counterfeit $20 CAD Banknotes - Industry Standard Replicas',
+    price: '150.00',
+    category: 'canadian-dollars',
+    categoryName: 'Canadian Dollars',
+    image: '/images/canadian-dollars/cad-20.png',
+    slug: 'buy-counterfeit-20-cad-banknotes',
+    description: 'Buy premium counterfeit $20 CAD bills online. Features the signature green coloration, Queen Elizabeth II portraiture, and high-fidelity simulated holographic security ribbon details. Calibrated for beautiful color output on modern digital cine cameras.',
+    features: [
+      'Crisp green-tone polymer replication and micro-details',
+      'Double-sided color fidelity printing with compliant markings',
+      'Matte, non-glare finish designed for professional filming',
+      'Bundled in security band wraps of 100 individual notes'
+    ],
+    specifications: [
+      'Dimensions: 152.4mm x 69.85mm',
+      'Weight: 110g per stack',
+      'Material: Direct hybrid matte polymer-paper stock'
+    ],
+    variations: [
+      { id: 'v1', name: '$2,000 CAD Face Value (100 Notes Prop Book)', price: '150.00' },
+      { id: 'v2', name: '$5,000 CAD Face Value (250 Notes Prop Book)', price: '250.00' },
+      { id: 'v3', name: '$10,000 CAD Face Value (500 Notes Prop Book)', price: '450.00' },
+      { id: 'v4', name: '$25,000 CAD Face Value (1,250 Notes Prop Book)', price: '800.00' },
+      { id: 'v5', name: '$50,000 CAD Face Value (2,500 Notes Prop Book)', price: '1200.00' }
+    ]
+  },
+  {
+    id: 'cad-50',
+    name: 'Buy Counterfeit $50 CAD Banknotes - Elite Prop Stacks',
+    price: '150.00',
+    category: 'canadian-dollars',
+    categoryName: 'Canadian Dollars',
+    image: '/images/canadian-dollars/cad-50.png',
+    slug: 'buy-counterfeit-50-cad-banknotes',
+    description: 'Purchase high-quality fake $50 Canadian bills online. Designed with correct red color gradients and William Lyon Mackenzie King portraits. Perfect for high-stakes scenes, heist vaults, and professional productions filming inside Australia.',
+    features: [
+      'Rich-red theme matching and precise polymer window simulation',
+      'Double-sided alignment templates with legible compliance markings',
+      'Specular glow-free presentation matte overlays',
+      '100 bills wrapped in security bands'
+    ],
+    specifications: [
+      'Dimensions: 152.4mm x 69.85mm',
+      'Weight: 110g per stack',
+      'Material: Direct hybrid matte polymer-paper stock'
+    ],
+    variations: [
+      { id: 'v1', name: '$5,000 CAD Face Value (100 Notes Prop Book)', price: '150.00' },
+      { id: 'v2', name: '$10,000 CAD Face Value (200 Notes Prop Book)', price: '250.00' },
+      { id: 'v3', name: '$25,000 CAD Face Value (500 Notes Prop Book)', price: '500.00' },
+      { id: 'v4', name: '$50,000 CAD Face Value (1,000 Notes Prop Book)', price: '800.00' },
+      { id: 'v5', name: '$100,000 CAD Face Value (2,000 Notes Prop Book)', price: '1200.05' }
+    ]
+  },
+  {
+    id: 'cad-100',
+    name: 'Buy Counterfeit $100 CAD Banknotes - Top Tier Prop Money',
+    price: '150.00',
+    category: 'canadian-dollars',
+    categoryName: 'Canadian Dollars',
+    image: '/images/canadian-dollars/cad-100.png',
+    slug: 'buy-counterfeit-100-cad-banknotes',
+    description: 'Order elite fake $100 Canadian dollar bills online. Crafted specifically for high-definition music promos, TV crime thrillers, and commercial photography where maximum impact cash stacks are required. Beautiful detail matching with iconic bronze-brown polymer accents.',
+    features: [
+      'Bronze-brown polymer design and pristine Robert Borden portraiture',
+      'True double-sided full high-resolution color printing',
+      'No gloss or glare, anti-reflective matte screen finish',
+      '100 premium prop bills per bank-strapped bundle'
+    ],
+    specifications: [
+      'Dimensions: 152.4mm x 69.85mm',
+      'Weight: 110g per stack',
+      'Material: Direct hybrid matte polymer-paper stock'
+    ],
+    variations: [
+      { id: 'v1', name: '$10,000 CAD Face Value (100 Notes Prop Book)', price: '150.00' },
+      { id: 'v2', name: '$20,000 CAD Face Value (200 Notes Prop Book)', price: '250.00' },
+      { id: 'v3', name: '$50,000 CAD Face Value (500 Notes Prop Book)', price: '500.00' },
+      { id: 'v4', name: '$100,000 CAD Face Value (1,000 Notes Prop Book)', price: '800.00' },
+      { id: 'v5', name: '$200,000 CAD Face Value (2,000 Notes Prop Book)', price: '1200.05' }
     ]
   }
 ];
