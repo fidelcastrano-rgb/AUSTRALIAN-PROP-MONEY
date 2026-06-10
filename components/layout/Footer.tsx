@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Mail, Phone } from 'lucide-react';
 import LogoImage from '../../public/Australianpropmoney1.png';
 
 export default function Footer() {
@@ -60,10 +60,6 @@ export default function Footer() {
           <div>
             <h3 className="text-banknote-navy font-heading font-bold text-lg mb-6 uppercase tracking-wide">Contact & Locations</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-banknote-gold shrink-0 mt-0.5" />
-                <span className="text-sm">123 Production Way<br/>Sydney, NSW 2000<br/>Australia</span>
-              </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-banknote-gold shrink-0" />
                 <a href="https://wa.me/61485989180" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-banknote-green transition-colors">

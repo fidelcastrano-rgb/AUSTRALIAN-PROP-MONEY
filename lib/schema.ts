@@ -6,7 +6,7 @@ export const organizationSchema = {
   logo: 'https://australianpropsmoney.com/logo.png',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+447341056054',
+    telephone: '+61485989180',
     contactType: 'customer service',
     areaServed: 'AU',
     availableLanguage: 'English'
@@ -20,19 +20,13 @@ export const localBusinessSchema = {
   image: 'https://australianpropsmoney.com/storefront.jpg',
   '@id': 'https://australianpropsmoney.com',
   url: 'https://australianpropsmoney.com',
-  telephone: '+447341056054',
+  telephone: '+61485989180',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '123 Production Way',
     addressLocality: 'Sydney',
     addressRegion: 'NSW',
     postalCode: '2000',
     addressCountry: 'AU'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: -33.8688,
-    longitude: 151.2093
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

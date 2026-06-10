@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, Clock } from 'lucide-react';
 
 export const metadata = {
   title: 'Contact Us',
@@ -48,13 +48,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <MapPin className="w-6 h-6 text-banknote-green shrink-0 mt-1" />
-                  <div className="ml-4">
-                    <h3 className="font-bold text-gray-900">Head Office</h3>
-                    <p className="text-gray-600 mt-1">123 Production Way<br/>Sydney, NSW 2000<br/>Australia</p>
-                  </div>
-                </div>
+
               </div>
             </div>
 
