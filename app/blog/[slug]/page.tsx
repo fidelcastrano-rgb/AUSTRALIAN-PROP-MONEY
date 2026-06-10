@@ -302,16 +302,6 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Standard Warning / Disclaimers Sidebar Box */}
-            <div className="bg-amber-50/50 border border-amber-200/60 p-6 rounded-2xl">
-              <h3 className="text-xs uppercase font-extrabold tracking-widest text-amber-700 mb-2">
-                Reproduction Warnings
-              </h3>
-              <p className="text-[11px] text-amber-800/85 leading-relaxed font-semibold">
-                This blog article provides historical and general descriptive guidelines for prop currency art. All replica products offered by Australian Prop Money strictly incorporate the sizing offsets and legal notations required under commonwealth and international law to eliminate any misuse.
-              </p>
-            </div>
-
           </div>
 
         </div>

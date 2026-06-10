@@ -113,7 +113,7 @@ export default function ShippingPolicyPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-sm text-gray-600 mb-4">
               <li>An automated email dispatch notification will be triggered, carrying your unique <strong>carrier tracking link</strong>.</li>
-              <li>For custom requests prepared on WhatsApp, our agents will snap a photo of the packed bundle and the physical shipping labels before final courier pick-up to verify exact packing compliance under client scrutiny.</li>
+              <li>For custom requests prepared on WhatsApp, our agents will snap a photo of the packed bundle and the physical shipping labels before final courier pick-up to verify exact packing under client scrutiny.</li>
               <li>You may track the package in real-time until it is securely dropped at your designated front door or studio loading dock.</li>
             </ul>
           </div>
@@ -131,7 +131,7 @@ export default function ShippingPolicyPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2 text-sm text-gray-600 mb-4">
               <li><strong>Lost Shipments:</strong> If a package is declared officially lost in carrier systems, we will initiate a <strong>100% Free Replacements Shipments</strong> of your identical prop catalog order.</li>
-              <li><strong>Customs Seizures:</strong> For custom requests stuck inside highly severe border clearance queues, our logistics compliance team will engage customs officials to release the educational media props, or reship a complementary bundle via secondary corridors.</li>
+              <li><strong>Customs Seizures:</strong> For custom requests stuck inside highly severe border clearance queues, our logistics team will engage customs officials to release the educational media props, or reship a complementary bundle via secondary corridors.</li>
               <li><strong>Inaccurate Address Failures:</strong> Packages returned to our sorting centers due to incorrect delivery addresses submitted by the user will incur nominal reshipping courier fees.</li>
             </ul>
           </div>
@@ -145,7 +145,7 @@ export default function ShippingPolicyPage() {
             <strong>Need instant tracking reviews or urgent overnight filmmaker delivery scheduling?</strong>
           </p>
           <p className="text-sm font-semibold text-banknote-navy">
-            Chat with us on WhatsApp <span className="text-banknote-green">+447341056054</span> or contact tracking: <span className="text-banknote-green">info@australianpropsmoney.com</span>
+            Chat with us on WhatsApp <span className="text-banknote-green">+61485989180</span> or contact tracking: <span className="text-banknote-green">info@australianpropsmoney.com</span>
           </p>
         </div>
 

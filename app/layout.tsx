@@ -3,7 +3,6 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import ComplianceNoticeBanner from '@/components/shared/ComplianceNoticeBanner';
 import { CartProvider } from '@/components/shared/CartProvider';
 
 const inter = Inter({
@@ -60,7 +59,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased bg-gray-50 text-[#1a2942] min-h-screen flex flex-col">
         <CartProvider>
-          <ComplianceNoticeBanner />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

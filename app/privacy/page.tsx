@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-bold text-banknote-navy">1. Information We Collect</h2>
             </div>
             <p className="mb-4">
-              We collect information to provide high-quality services, guarantee regulatory compliance, and fulfill order deliveries smoothly. This includes:
+              We collect information to provide high-quality services and fulfill order deliveries smoothly. This includes:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                 <h3 className="font-bold text-banknote-navy text-sm uppercase tracking-wide mb-2">Communication History</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Records of your design inquiries, custom order details requested via WhatsApp (+447341056054), contact forms, or email messages.
+                  Records of your design inquiries, custom order details requested via WhatsApp (+61485989180), contact forms, or email messages.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
@@ -129,7 +129,6 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Courier Services:</strong> Sharing address coordinates with regional shipping networks (DHL, FedEx, Australia Post, etc.) for physical package delivery.</li>
               <li><strong>Financial Gateways:</strong> Safe token transmission with billing processors to settle orders without credit card details leaks.</li>
-              <li><strong>Compliance Advisors:</strong> Auditing and reporting structures when legal compliance regarding prop money designs is mandated.</li>
             </ul>
           </div>
 
@@ -147,7 +146,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Right to Access:</strong> Request a copy of the personal information we maintain in your profile records.</li>
               <li><strong>Right to Rectification:</strong> Edit or correct details in your delivery addresses or custom product schedules.</li>
-              <li><strong>Right to Erasure:</strong> Request the deletion of order histories or personal accounts (subject to certain transaction logging retentions required for federal currency reproduction compliance).</li>
+              <li><strong>Right to Erasure:</strong> Request the deletion of order histories or personal accounts.</li>
             </ul>
             <p className="mt-4">
               To exercise these privileges or question us regarding detail protection, reach our administration team directly at <strong>info@australianpropsmoney.com</strong>.
@@ -159,10 +158,10 @@ export default function PrivacyPolicyPage() {
         {/* Footer Contact Callout */}
         <div className="bg-slate-100 rounded-2xl p-6 text-center border border-slate-200 mt-8">
           <p className="text-sm text-gray-600">
-            Have questions about our data security operations, custom orders privacy, or federal guidelines?
+            Have questions about our data security operations or custom orders privacy?
           </p>
           <p className="text-sm font-semibold text-banknote-navy mt-2">
-            Contact us at <span className="text-banknote-green">info@australianpropsmoney.com</span> or via WhatsApp <span className="text-banknote-green">+447341056054</span>
+            Contact us at <span className="text-banknote-green">info@australianpropsmoney.com</span> or via WhatsApp <span className="text-banknote-green">+61485989180</span>
           </p>
         </div>
 

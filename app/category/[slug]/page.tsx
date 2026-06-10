@@ -181,16 +181,6 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
               <li>Professional use (music videos, commercial advertising, social media content)</li>
             </ul>
 
-            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Important Legal Disclaimer</h4>
-            <p className="text-slate-700 mb-4">While our props are visually realistic fake money, they are NOT legal tender under any circumstances:</p>
-            <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
-              <li>They are designed to fail all automated banking checks (ATM machines, cash validators, currency detectors)</li>
-              <li>They must never be used for purchases or attempted as real currency</li>
-              <li>They cannot be deposited into bank accounts</li>
-              <li>Using them fraudulently is illegal and carries severe criminal penalties</li>
-              <li>Each note includes clear PROPRIETARY PROP markings on the reverse side visible upon close inspection</li>
-            </ul>
-
             <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Frequently Asked Questions</h3>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Can I Buy Real Counterfeit Money Online That Works in Vending Machines?</h4>
@@ -240,11 +230,6 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
               <li>Fast turnaround for tight production schedules</li>
               <li>Bulk discounts available for large productions</li>
             </ul>
-            
-            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 text-sm text-slate-600">
-              <strong className="text-banknote-navy mb-2 block">Prop Money Usage Disclaimer:</strong>
-              This website and all products are intended solely for legitimate motion picture, television, educational, and novelty purposes. All purchasers agree to use these props in compliance with applicable laws and regulations.
-            </div>
           </div>
         )}
 
@@ -301,16 +286,6 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
               <li>Professional use (music videos, commercial advertising, social media content)</li>
             </ul>
 
-            <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Important Legal Disclaimer</h4>
-            <p className="text-slate-700 mb-4">While our props are visually realistic fake money, they are NOT legal tender under any circumstances:</p>
-            <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
-              <li>They are designed to fail all automated banking checks (ATM machines, cash validators, currency detectors)</li>
-              <li>They must never be used for purchases or attempted as real currency</li>
-              <li>They cannot be deposited into bank accounts</li>
-              <li>Using them fraudulently is illegal and carries severe criminal penalties</li>
-              <li>Each note includes clear compliance markings visible upon close inspection</li>
-            </ul>
-
             <h3 className="text-2xl font-bold text-banknote-navy mt-10 mb-4">Frequently Asked Questions</h3>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Can I Buy Real Counterfeit Money Online That Works in Vending Machines?</h4>
@@ -325,11 +300,6 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
               <li>Express local shipping: Overnight to 2 business days to major Australian metro areas</li>
               <li>Rush production: Available for urgent film deadlines (contact us via WhatsApp)</li>
             </ul>
-
-            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 text-sm text-slate-600">
-              <strong className="text-banknote-navy mb-2 block">Prop Money Usage Disclaimer:</strong>
-              This website and all products are intended solely for legitimate motion picture, television, educational, and novelty purposes. All purchasers agree to use these props in compliance with applicable laws and regulations.
-            </div>
           </div>
         )}
 

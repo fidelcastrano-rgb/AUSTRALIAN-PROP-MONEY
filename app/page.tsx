@@ -284,27 +284,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Compliance Section */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-3 border-l-4 border-banknote-gold pl-4 py-1">
-                <h3 className="text-2xl font-black text-banknote-navy uppercase tracking-wide">
-                  Strict Compliance with Regional Currency Regulations
-                </h3>
-              </div>
-              <p className="text-gray-700 text-base leading-relaxed">
-                Navigating replication codes while trying to buy fake money online can be confusing. The Reserve Bank of Australia (RBA) guidelines exist to prevent any counterfeit from entering real retail ecosystems. Our production is dedicated to 100% legal on-set operations.
-              </p>
-              <p className="text-gray-700 text-base leading-relaxed">
-                To guarantee your scene can be filmed safely without regulatory interruptions, our replica dollar stacks incorporate modern design safeguards:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-sm text-gray-650">
-                <li><strong>Explicit Legal Disclaimers:</strong> Each bill carries printed compliance indicators such as &quot;FOR MOTION PICTURE USE ONLY&quot; on both sides, making its nature immediately discernible upon close inspection.</li>
-                <li><strong>Modified Portraiture Frameworks:</strong> Historic portraits are adapted with unique artistic details, distinguishing them from genuine national reserve currency.</li>
-                <li><strong>Altered Dimensions and Proportions:</strong> Scaling margins list minor subtle variations, and optical holographic security lines are stylized as flat prints that mimic camera reflections without implementing true metallic film technology.</li>
-                <li><strong>Zero Machine Integrity:</strong> Our notes will never pass real ATM readers, cashier cash scanners, or commercial vending loops, protecting the public while keeping your production fully clear of any legal concerns.</li>
-              </ul>
-            </div>
-
             {/* Local Hubs Content Section */}
             <div className="space-y-8 pt-6 border-t border-slate-100">
               <h3 className="text-2xl font-black text-banknote-navy uppercase tracking-wide flex items-center gap-2">
@@ -431,7 +410,7 @@ export default function Home() {
                 <span>Contact Creative Dept</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="https://wa.me/447341056054" className="inline-flex justify-center items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/60 text-white rounded-lg font-bold transition-all text-sm uppercase">
+              <a href="https://wa.me/61485989180" className="inline-flex justify-center items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/60 text-white rounded-lg font-bold transition-all text-sm uppercase">
                 <span>Direct WhatsApp Chat</span>
               </a>
             </div>

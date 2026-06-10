@@ -66,8 +66,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-banknote-gold shrink-0" />
-                <a href="https://wa.me/447341056054" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-banknote-green transition-colors">
-                  WhatsApp: +447341056054
+                <a href="https://wa.me/61485989180" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-banknote-green transition-colors">
+                  WhatsApp: +61485989180
                 </a>
               </li>
               <li className="flex items-center">
@@ -92,19 +92,15 @@ export default function Footer() {
               <Link href="/privacy" className="hover:text-banknote-green transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-banknote-green transition-colors">Terms of Service</Link>
               <Link href="/shipping" className="hover:text-banknote-green transition-colors">Shipping Policy</Link>
-              <Link href="/compliance" className="bg-red-600 text-white px-2 py-1 rounded rotate-[-2deg] hover:rotate-0 transition-transform">Compliance</Link>
             </div>
             <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mt-4 md:mt-0">&copy; {currentYear} Prop Counterfeit Notes. All rights reserved.</p>
-          </div>
-          <div className="text-xs text-slate-500 text-center max-w-4xl mx-auto leading-relaxed border-t border-slate-200 pt-6">
-            <strong>Disclaimer:</strong> This website and all products are intended solely for legitimate motion picture, television, educational, and novelty purposes. All purchasers agree to use these props in compliance with applicable laws and regulations.
           </div>
         </div>
       </div>
       
       {/* WhatsApp Floating Button */}
       <a 
-        href="https://wa.me/447341056054" 
+        href="https://wa.me/61485989180" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-colors z-50 flex items-center justify-center hover:scale-110 duration-300"

@@ -48,40 +48,6 @@ export default function TermsOfServicePage() {
             </ul>
           </div>
 
-          {/* Section 2: COMPLIANCE WARNING */}
-          <div className="bg-red-50 rounded-xl p-6 border border-red-200 my-8">
-            <div className="flex items-center gap-2 mb-3">
-              <AlertTriangle className="w-6 h-6 text-red-600 shrink-0" />
-              <h3 className="text-lg font-bold text-red-900">2. ABSOLUTE COMPLIANCE DISCLOSURE & LEGAL COMPLIANCE</h3>
-            </div>
-            <p className="text-red-800 text-sm leading-relaxed mb-4">
-              Our replica banknotes are high-fidelity models specifically designed for cinematic camera captures and digital productions. They are <strong>NOT REAL CURRENCY</strong> and are completely useless as legal tender. 
-            </p>
-            <div className="space-y-3.5 text-xs text-red-850 font-medium">
-              <p>🔴 <strong>Attempting to use prop money/replica bills to purchase goods, settle debts, or deposit into banks is a direct federal crime.</strong></p>
-              <p>🔴 If you initiate such a transaction, you will face federal prosecution, significant fines, or heavy jail sentences.</p>
-              <p>🔴 The Company maintains zero-tolerance for illicit financial injection attempts and coordinates fully with law enforcement groups globally, providing purchaser databases, payment logs, and chat transcripts when requested.</p>
-            </div>
-          </div>
-
-          {/* Section 3: Product Description & Media Standards */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-banknote-green-light flex items-center justify-center text-banknote-green shrink-0">
-                <Hammer className="w-4 h-4" />
-              </div>
-              <h2 className="text-2xl font-bold text-banknote-navy">3. Product Design Specifications & Use</h2>
-            </div>
-            <p className="mb-4">
-              To remain fully compliant with currency replica laws worldwide, our products are physical artistic models incorporating critical legal design safeguards:
-            </p>
-            <ul className="list-disc pl-6 space-y-2.5 text-sm text-gray-600">
-              <li><strong>Text Warnings:</strong> Each banknote has clearly printed visible markings, e.g. &quot;FOR MOTION PICTURE USE ONLY&quot;, &quot;NOT LEGAL TENDER&quot;, or &quot;PROP NOTES&quot;.</li>
-              <li><strong>Holograms and Details:</strong> Replicated security ribbons reflect camera lighting realistically but behave differently from real metallic films or complex plastic multi-layered holograms.</li>
-              <li><strong>Materials:</strong> Prop dollars are produced on special dense stocks or tailored polymers that differ significantly to the touch from genuine federal polymer substrates. They do not trigger real ATM sensors or UV currency reader detectors.</li>
-            </ul>
-          </div>
-
           {/* Section 4: WhatsApp Orders & Payment Terms */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -125,7 +91,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold text-banknote-navy">6. Governing Law</h2>
             </div>
             <p>
-              These terms and conditions are governed by and construed in accordance with the laws of <strong>New South Wales, Australia</strong>, with supplemental alignment to currency compliance laws in USA, Canada, and the UK. You irrevocably submit to the exclusive jurisdiction of the state, federal, or administrative courts in those locations to settle any disputes.
+              These terms and conditions are governed by and construed in accordance with the laws of <strong>New South Wales, Australia</strong>. You irrevocably submit to the exclusive jurisdiction of the state, federal, or administrative courts in those locations to settle any disputes.
             </p>
           </div>
 
@@ -133,14 +99,11 @@ export default function TermsOfServicePage() {
 
         {/* Action / Contact Bar */}
         <div className="bg-slate-100 rounded-2xl p-6 text-center border border-slate-200 mt-8">
-          <p className="text-sm text-gray-600">
-            For specific approvals or custom film prop clearance agreements, please interface directly with compliance:
-          </p>
           <p className="text-sm font-semibold text-banknote-navy mt-2 flex items-center justify-center gap-2">
             <Mail className="w-4 h-4 text-banknote-green" />
             <span>info@australianpropsmoney.com</span>
             <span className="text-slate-300">|</span>
-            <span>WhatsApp Group Support: +447341056054</span>
+            <span>WhatsApp Group Support: +61485989180</span>
           </p>
         </div>
 
