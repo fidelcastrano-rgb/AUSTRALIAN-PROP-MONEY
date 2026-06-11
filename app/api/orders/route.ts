@@ -1,9 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getOrders, updateOrderStatus } from "@/lib/db";
+import { cookies } from "next/headers";
+
+async function isAuthorized() {
+  const cookieStore = await cookies();
+  const session = cookieStore.get("admin_session");
+  return session && session.value === "authenticated";
+}
 
 // API to support Admin Dashboard reading and status alterations
 export async function GET() {
   try {
+    if (!await isAuthorized()) {
+      return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
+    }
+
     const orders = await getOrders();
     return NextResponse.json({ orders }, { status: 200 });
   } catch (error: any) {
@@ -17,8 +28,13 @@ export async function GET() {
 
 export async function PATCH(req: NextRequest) {
   try {
+    if (!await isAuthorized()) {
+      return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
+    }
+
     const body = await req.json();
     const { orderNumber, status } = body;
+
 
     if (!orderNumber || !status) {
       return NextResponse.json(

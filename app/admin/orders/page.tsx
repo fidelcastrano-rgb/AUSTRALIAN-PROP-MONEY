@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { 
   Search, 
   Filter, 
@@ -16,7 +17,8 @@ import {
   AlertCircle, 
   XCircle, 
   Truck,
-  PlusCircle
+  PlusCircle,
+  LogOut
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -41,6 +43,7 @@ interface Order {
 }
 
 export default function AdminOrdersPage() {
+  const router = useRouter();
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -56,6 +59,10 @@ export default function AdminOrdersPage() {
 
     try {
       const res = await fetch('/api/orders');
+      if (res.status === 401) {
+        router.replace('/admin');
+        return;
+      }
       const data = await res.json();
       if (res.ok && data.orders) {
         setOrders(data.orders);
@@ -67,6 +74,16 @@ export default function AdminOrdersPage() {
       setRefreshing(false);
     }
   };
+
+  const handleLogout = async () => {
+    try {
+      await fetch('/api/admin/login', { method: 'DELETE' });
+    } catch (err) {
+      console.error(err);
+    }
+    router.replace('/admin');
+  };
+
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -232,6 +249,13 @@ export default function AdminOrdersPage() {
             >
               <RefreshCw className={`w-4 h-4 shrink-0 ${refreshing ? 'animate-spin' : ''}`} />
               Refresh
+            </button>
+            <button 
+              onClick={handleLogout}
+              className="bg-red-50 hover:bg-red-100 text-red-700 font-bold px-4 py-2.5 rounded-xl border border-red-200 text-xs uppercase tracking-wide flex items-center gap-2 transition-all cursor-pointer"
+            >
+              <LogOut className="w-4 h-4 shrink-0" />
+              Sign Out
             </button>
           </div>
         </div>
