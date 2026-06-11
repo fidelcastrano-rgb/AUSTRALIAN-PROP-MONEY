@@ -194,22 +194,14 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
             <p className="text-slate-700 mb-8">Attempting to use any fake currency in vending machines, ATMs, or stores is a federal crime with serious prison consequences. Our props exist solely for camera authenticity, not financial deception.</p>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Do You Ship Internationally?</h4>
-            <p className="text-slate-700 mb-4">No. We currently only ship our prop money locally within Australia to ensure extremely fast delivery and strict compliance with local transport rules. We safely deliver to all Australian states and territories, including:</p>
-            <ul className="list-disc pl-6 mb-4 text-slate-700 space-y-2">
-              <li>New South Wales (NSW - Sydney, Newcastle)</li>
-              <li>Victoria (VIC - Melbourne, Geelong)</li>
-              <li>Queensland (QLD - Brisbane, Gold Coast)</li>
-              <li>Western Australia (WA - Perth)</li>
-              <li>South Australia (SA - Adelaide)</li>
-              <li>Tasmania, Australian Capital Territory, and Northern Territory</li>
-            </ul>
-            <p className="text-slate-700 mb-8">Many local clients pair our Euro props with other international prop bills for scenes filmed directly inside Australia.</p>
+            <p className="text-slate-700 mb-4">Yes! We ship worldwide. International orders are processed with flat-rate shipping of $50.00 AUD. All international shipments are prepared in secure, dual-vacuum stealth packaging to guarantee seamless transit and hassle-free customs clearance.</p>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">How Long Does Shipping Take?</h4>
             <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
-              <li>Standard local shipping: 3–5 business days within Australia</li>
-              <li>Express local shipping: Overnight to 2 business days to major Australian metro areas</li>
-              <li>Rush production: Available for urgent film deadlines (contact us via WhatsApp)</li>
+              <li>Local Shipping (Australia): 3–5 business days ($10.00 AUD gap-saver)</li>
+              <li>Normal Shipping (Priority Courier): 1–2 business days ($20.00 AUD)</li>
+              <li>Same Day Shipping (Urgent Dispatch): Same Day Courier / Overnight metro routing ($40.00 AUD)</li>
+              <li>International Shipping (Global): 4–8 business days ($50.00 AUD)</li>
             </ul>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Can I Customize Denominations or Create Custom Stacks?</h4>
@@ -292,13 +284,14 @@ export default async function CategoryPage(props: { params: Promise<{ slug: stri
             <p className="text-slate-700 mb-4">No—and you shouldn&apos;t try. Our notes are for visual use only. They do not contain any security features of actual Canadian currencies and will fail all electronic validators and scanners. Attempting to use any fake currency in vending machines, ATMs, or stores is a federal crime with serious prison consequences. Our props exist solely for camera authenticity, not financial deception.</p>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">Do You Ship Internationally?</h4>
-            <p className="text-slate-700 mb-4">No. We currently only ship our prop money locally within Australia to ensure extremely fast delivery and strict compliance with local transport rules. We safely deliver to all Australian states and territories, including New South Wales, Victoria, Queensland, Western Australia, South Australia, Tasmania, ACT, and NT.</p>
+            <p className="text-slate-700 mb-4">Yes! We ship worldwide. International deliveries are configured at an automated flat rate of $50.00 AUD. Inside Australia, we ship locally to all states and territories (NSW, VIC, QLD, WA, SA, TAS, NT, ACT) with expedited priority courier choices.</p>
 
             <h4 className="text-xl font-bold text-banknote-navy mt-6 mb-2">How Long Does Shipping Take?</h4>
             <ul className="list-disc pl-6 mb-8 text-slate-700 space-y-2">
-              <li>Standard local shipping: 3–5 business days within Australia</li>
-              <li>Express local shipping: Overnight to 2 business days to major Australian metro areas</li>
-              <li>Rush production: Available for urgent film deadlines (contact us via WhatsApp)</li>
+              <li>Local Shipping (Australia): 3–5 business days ($10.00 AUD)</li>
+              <li>Normal Courier Shipping: 1–2 business days ($20.00 AUD)</li>
+              <li>Same Day Shipping (Urgent Dispatch): Overnight / Same Day Courier ($40.00 AUD)</li>
+              <li>International Shipping (Global): 4–8 business days ($50.00 AUD)</li>
             </ul>
           </div>
         )}

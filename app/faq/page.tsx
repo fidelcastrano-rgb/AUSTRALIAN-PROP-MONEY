@@ -12,8 +12,8 @@ export default function FAQPage() {
       answer: "Yes, our prop money is entirely legal when used for its intended purpose: film, television, theatre, photography, and training. It is designed to comply with Australian regulations. All notes contain explicit, non-removable text stating 'FOR MOTION PICTURE USE ONLY' and differ in key security aspects from real currency. Attempting to use prop money as actual currency is a federal crime."
     },
     {
-      question: "How fast is shipping to Sydney or Melbourne?",
-      answer: "We offer Express Delivery which typically arrives overnight to major metro areas including Sydney, Melbourne, Brisbane, and the Gold Coast when ordered before 2 PM AEST. Standard shipping takes 3-5 business days."
+      question: "How fast is shipping?",
+      answer: "We offer several choices tailored to your production's urgency: Local Australia Shipping ($10.00), Normal Priority Courier ($20.00), Same Day Dispatch & Urgency routing ($40.00), and Global International Shipping ($50.00). Orders on Same Day dispatch are packed first and processed for priority transit windows."
     },
     {
       question: "Do the notes look identical on camera?",
@@ -29,7 +29,7 @@ export default function FAQPage() {
     },
     {
       question: "Do you sell internationally?",
-      answer: "No, we ship exclusively within Australia. This ensures extreme physical security, rapid transit, and precise alignment with standard local compliance regulations."
+      answer: "Yes! We now ship worldwide using our international courier network. International shipping is configured at an automated flat rate of $50.00 AUD. All orders are packed inside double-vacuum discrete stealth packaging to guarantee secure custom clearance."
     }
   ];
 

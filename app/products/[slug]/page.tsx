@@ -130,7 +130,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
                 </div>
                 <div className="flex items-center text-sm text-slate-700 font-medium">
                   <Truck className="w-5 h-5 text-banknote-navy mr-3" />
-                  <span>Express Dispatch Within Australia Only</span>
+                  <span>Expedited Worldwide Discrete Dispatch</span>
                 </div>
               </div>
 
@@ -167,9 +167,9 @@ export default async function ProductDetailPage(props: { params: Promise<{ slug:
             <div>
               <h3 className="font-bold text-lg mb-4 text-banknote-navy">Shipping & Returns</h3>
                <ul className="list-disc pl-5 space-y-2 text-slate-600 font-medium">
-                <li>Overnight Express available to major Australian cities</li>
-                <li>Local shipping only within Australia via Australia Post</li>
-                <li>Discreet, secure packaging</li>
+                <li>Local Australia shipping ($10.00 AUD) and priority courier choices</li>
+                <li>Global International shipping options ($50.00 AUD flat rate)</li>
+                <li>Double vacuum-sealed discreet stealth packaging</li>
                 <li>Returns accepted within 14 days (must be unused/unopened)</li>
               </ul>
             </div>

@@ -45,36 +45,31 @@ export default function ShippingPolicyPage() {
               <table className="w-full text-left text-sm border-collapse">
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200 text-banknote-navy font-bold">
-                    <th className="px-4 py-3">Region Covered</th>
-                    <th className="px-4 py-3">Standard Delivery</th>
-                    <th className="px-4 py-3">Express Dispatch</th>
+                    <th className="px-4 py-3">Shipping Method</th>
+                    <th className="px-4 py-3">Cost (AUD)</th>
+                    <th className="px-4 py-3">Estimated Transit Window</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-gray-600">
                   <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-800">Australia (Local)</td>
+                    <td className="px-4 py-3 font-semibold text-slate-800">Local Shipping (Australia)</td>
+                    <td className="px-4 py-3 text-banknote-green font-bold">$10.00</td>
                     <td className="px-4 py-3">3 - 5 business days</td>
-                    <td className="px-4 py-3 text-banknote-green font-semibold">1 - 2 business days (Overnight Sydney/Melb)</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-800">Canada / USA</td>
-                    <td className="px-4 py-3">5 - 7 business days</td>
-                    <td className="px-4 py-3 text-banknote-green font-semibold">2 - 3 business days</td>
+                    <td className="px-4 py-3 font-semibold text-slate-800">Normal Shipping</td>
+                    <td className="px-4 py-3 text-banknote-green font-bold">$20.00</td>
+                    <td className="px-4 py-3 font-semibold text-slate-800">1 - 2 business days (Metro Priority Courier)</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-800">United Kingdom</td>
-                    <td className="px-4 py-3">5 - 7 business days</td>
-                    <td className="px-4 py-3 text-banknote-green font-semibold">2 - 3 business days</td>
+                    <td className="px-4 py-3 font-semibold text-slate-800">Same Day Shipping</td>
+                    <td className="px-4 py-3 text-banknote-green font-bold">$40.00</td>
+                    <td className="px-4 py-3 text-banknote-green font-semibold">Same Day Dispatch & Urgent Priority Routing</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-800">European Union</td>
-                    <td className="px-4 py-3">7 - 9 business days</td>
-                    <td className="px-4 py-3 text-banknote-green font-semibold">3 - 4 business days</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-800">Oceania & Rest of World</td>
-                    <td className="px-4 py-3">8 - 12 business days</td>
-                    <td className="px-4 py-3 text-banknote-green font-semibold">4 - 5 business days</td>
+                    <td className="px-4 py-3 font-semibold text-slate-800">International Shipping</td>
+                    <td className="px-4 py-3 text-banknote-green font-bold">$50.00</td>
+                    <td className="px-4 py-3">4 - 8 business days (Global Registered Air Post)</td>
                   </tr>
                 </tbody>
               </table>
