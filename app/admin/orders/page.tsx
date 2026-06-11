@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { 
   Search, 
   Filter, 
@@ -18,7 +19,8 @@ import {
   XCircle, 
   Truck,
   PlusCircle,
-  LogOut
+  LogOut,
+  Mail
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -242,6 +244,13 @@ export default function AdminOrdersPage() {
               <PlusCircle className="w-4 h-4 shrink-0" />
               Seed Test Order
             </button>
+            <Link
+              href="/admin/test-email"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2.5 rounded-xl border border-indigo-500 text-xs uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer"
+            >
+              <Mail className="w-4 h-4 shrink-0" />
+              Test Resend
+            </Link>
             <button 
               onClick={() => fetchOrders(true)}
               disabled={refreshing}
