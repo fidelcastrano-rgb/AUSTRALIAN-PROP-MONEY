@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     template: '%s | Australian Prop Money',
     default: 'Australian Prop Money for Film, TV & Creative Productions',
   },
-  description: 'Premium Australian-style prop notes designed exclusively for film production, photography, theatre, training simulations and creative projects.',
+  description: 'Shop Realistic  Australian Prop Money Design to replicate the real deal can be used for anything.',
   openGraph: {
     title: 'Australian Prop Money',
-    description: 'Premium Australian-style prop notes for film production, photography, theatre, training simulations and creative projects.',
+    description: 'Shop Realistic  Australian Prop Money Design to replicate the real deal can be used for anything.',
     url: '/',
     siteName: 'Australian Prop Money',
     locale: 'en_AU',

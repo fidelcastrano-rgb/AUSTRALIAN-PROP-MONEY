@@ -22,7 +22,7 @@ import { categories } from "@/lib/data";
 // Page-specific SEO metadata to optimize for Google's indexer
 export const metadata: Metadata = {
   title: "Australian Prop Money | Custom Film-Ready Prop Money Reels & Replica Bills",
-  description: "Shop premium Australian prop money designed specifically for film, TV, theatrical plays, commercials, and training simulations. Highly realistic camera-ready movie notes with express overnight dispatch to Sydney, Melbourne, Brisbane, and Gold Coast.",
+  description: "Shop Realistic  Australian Prop Money Design to replicate the real deal can be used for anything.",
   keywords: [
     "prop Money",
     "australian prop money",
