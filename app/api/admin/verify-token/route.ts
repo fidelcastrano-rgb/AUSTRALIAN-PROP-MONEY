@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 export async function POST(req: NextRequest) {
   try {
     const { token } = await req.json();
-    const correctToken = process.env.ADMIN_SECRET_TOKEN || "australianprop-admin-gateway";
+    const correctToken = process.env.ADMIN_SECRET_TOKEN || "0987654321";
 
     if (!token || token !== correctToken) {
       return NextResponse.json(

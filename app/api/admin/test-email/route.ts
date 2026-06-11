@@ -15,9 +15,9 @@ export async function GET() {
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY || "";
-    const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-    const adminEmail = process.env.RESEND_ADMIN_EMAIL || "info@australianpropsmoney.com";
+    const apiKey = process.env.RESEND_API_KEY || "re_VRKzZxvP_8AYP4zXcStJK4hAX5963Z2TU";
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "sales@australianpropsmoney.com";
+    const adminEmail = process.env.RESEND_ADMIN_EMAIL || "sales@australianpropsmoney.com";
 
     // Reveal length and secure bounds for diagnostic safety
     return NextResponse.json({
@@ -43,8 +43,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Target email address is required" }, { status: 400 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+    const apiKey = process.env.RESEND_API_KEY || "re_VRKzZxvP_8AYP4zXcStJK4hAX5963Z2TU";
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "sales@australianpropsmoney.com";
 
     if (!apiKey) {
       return NextResponse.json({

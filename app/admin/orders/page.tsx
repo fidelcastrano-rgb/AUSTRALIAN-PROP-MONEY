@@ -90,6 +90,7 @@ export default function AdminOrdersPage() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchOrders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleStatusUpdate = async (orderNumber: string, nextStatus: 'Pending' | 'Processing' | 'Completed' | 'Cancelled') => {

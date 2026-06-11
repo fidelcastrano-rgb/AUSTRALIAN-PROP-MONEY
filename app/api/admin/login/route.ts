@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 export async function POST(req: NextRequest) {
   try {
     const { passcode } = await req.json();
-    const correctPasscode = process.env.ADMIN_PASSCODE || "admin123";
+    const correctPasscode = process.env.ADMIN_PASSCODE || "0987654321";
 
     if (!passcode || passcode !== correctPasscode) {
       return NextResponse.json(

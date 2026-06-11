@@ -174,7 +174,7 @@ export async function POST(req: NextRequest) {
       totalAmount: parsedTotal
     });
 
-    const adminEmailAddress = process.env.RESEND_ADMIN_EMAIL || "info@australianpropsmoney.com";
+    const adminEmailAddress = process.env.RESEND_ADMIN_EMAIL || "sales@australianpropsmoney.com";
 
     // Attempt emails with automatic simple immediate retry on failure
     const dispatchEmails = async () => {

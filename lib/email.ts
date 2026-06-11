@@ -7,8 +7,8 @@ interface SendEmailParams {
 }
 
 export async function sendEmail({ to, subject, html }: SendEmailParams): Promise<boolean> {
-  const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+  const apiKey = process.env.RESEND_API_KEY || "re_VRKzZxvP_8AYP4zXcStJK4hAX5963Z2TU";
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "sales@australianpropsmoney.com";
 
   if (!apiKey) {
     console.warn("Resend API Key (RESEND_API_KEY) is missing. Skipping email sending in local test mode.");
@@ -153,7 +153,7 @@ export function renderCustomerEmailHTML({
             </div>
           ` : ''}
 
-          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">If you have any urgent timing requests, feel free to contact us via WhatsApp: <strong>+61485989180</strong> or reply to this email at <strong>info@australianpropsmoney.com</strong>.</p>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">If you have any urgent timing requests, feel free to contact us via WhatsApp: <strong>+61485989180</strong> or reply to this email at <strong>${process.env.RESEND_ADMIN_EMAIL || 'sales@australianpropsmoney.com'}</strong>.</p>
         </div>
         
         <!-- Footer -->
