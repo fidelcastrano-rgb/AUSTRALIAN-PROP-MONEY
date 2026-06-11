@@ -208,10 +208,12 @@ export async function POST(req: NextRequest) {
       }
     };
 
-    // Run emails async to prevent blocking browser response times
-    dispatchEmails().catch(err => {
+    // Await email dispatch to guarantee completion in serverless/container runtimes
+    try {
+      await dispatchEmails();
+    } catch (err) {
       console.error("Unhandled error background processing mail sender:", err);
-    });
+    }
 
     return NextResponse.json(
       { 
