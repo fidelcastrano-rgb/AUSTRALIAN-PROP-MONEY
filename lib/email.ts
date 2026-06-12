@@ -145,7 +145,7 @@ export function renderCustomerEmailHTML({
             </div>
           ` : ''}
 
-          ${paymentMethod.toLowerCase().includes('zelle') || paymentMethod.toLowerCase().includes('apple cash') || paymentMethod.toLowerCase().includes('chime') ? `
+          ${paymentMethod.toLowerCase().includes('zelle') || paymentMethod.toLowerCase().includes('apple cash') || paymentMethod.toLowerCase().includes('chime') || paymentMethod.toLowerCase().includes('payid') || paymentMethod.toLowerCase().includes('bank') || paymentMethod.toLowerCase().includes('transfer') ? `
             <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px; border-radius: 4px; margin-bottom: 24px;">
               <p style="margin: 0; font-size: 13px; color: #78350f; line-height: 1.5; font-weight: 600;">
                 <strong>Notice:</strong> This payment option will be emailed or WhatsApped to you once we receive and review your order.

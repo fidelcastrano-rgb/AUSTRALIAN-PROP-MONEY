@@ -68,7 +68,7 @@ export default function CheckoutPage() {
     if (selectedCountry === 'Australia') {
       return [
         cryptoOption,
-        { id: 'bank_transfer', label: 'Bank Transfer (AUD)', description: 'Direct local bank deposit across major Australian banks.' },
+        { id: 'payid', label: 'PayID', description: 'Fast, fee-free transfer to our registered PayID using any Australian bank app.' },
         cardOption
       ];
     } else if (selectedCountry === 'United States') {
@@ -251,7 +251,7 @@ export default function CheckoutPage() {
                 </div>
               )}
 
-              {(paymentMethod === 'zelle' || paymentMethod === 'apple_cash' || paymentMethod === 'chime' || paymentMethod === 'e_transfer') && (
+              {(paymentMethod === 'payid' || paymentMethod === 'bank_transfer' || paymentMethod === 'zelle' || paymentMethod === 'apple_cash' || paymentMethod === 'chime' || paymentMethod === 'e_transfer') && (
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl text-left">
                   <div className="flex items-start gap-2.5">
                     <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
@@ -577,6 +577,19 @@ export default function CheckoutPage() {
                       >
                         <p className="text-xs text-amber-800 leading-relaxed font-bold">
                           🇺🇸 UNITED STATES PAYMENT NOTICE: &quot;This payment option will be emailed or WhatsApped to you once we receive and review your order.&quot;
+                        </p>
+                      </motion.div>
+                    )}
+
+                    {(paymentMethod === 'payid' || paymentMethod === 'bank_transfer') && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mt-4 bg-amber-50/80 border border-amber-200 p-4 rounded-2xl"
+                      >
+                        <p className="text-xs text-amber-800 leading-relaxed font-bold">
+                          🇦🇺 PAYID / TRANSFER NOTICE: &quot;This direct transfer option will be secure-packed and routes will be emailed or WhatsApped to you once we receive and review your order.&quot;
                         </p>
                       </motion.div>
                     )}
