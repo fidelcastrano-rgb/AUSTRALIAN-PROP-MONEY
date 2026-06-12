@@ -35,32 +35,10 @@ export default function ResendDiagnosticSuite() {
   useEffect(() => {
     async function checkSession() {
       try {
-        // 1. Check if we have active gate clearance or session
-        const gateRes = await fetch('/api/admin/verify-token');
+        // Check if we have active session
         const sessionRes = await fetch('/api/admin/login');
         
-        // 2. Also read URL search query to auto-authorize in one fluid click
-        const params = new URLSearchParams(window.location.search);
-        const secretParam = params.get('token') || params.get('key');
-
-        let verifiedByToken = false;
-
-        if (secretParam) {
-          const verifyRes = await fetch('/api/admin/verify-token', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: secretParam }),
-          });
-          
-          if (verifyRes.ok) {
-            verifiedByToken = true;
-            setIsUnlocked(true);
-            // Redact query parameter immediately to keep history clean
-            window.history.replaceState({}, document.title, window.location.pathname);
-          }
-        }
-
-        if (verifiedByToken || gateRes.ok || sessionRes.ok) {
+        if (sessionRes.ok) {
           setIsUnlocked(true);
           // Fetch backend configuration metrics safely (server masked details)
           const diagRes = await fetch('/api/admin/test-email');
@@ -69,16 +47,17 @@ export default function ResendDiagnosticSuite() {
             setDiagnostics(data);
           }
         } else {
-          setIsUnlocked(false);
+          router.replace('/admin');
         }
       } catch (err) {
         console.error("Session lookup exception:", err);
+        router.replace('/admin');
       } finally {
         setIsCheckingSession(false);
       }
     }
     checkSession();
-  }, []);
+  }, [router]);
 
   const handleFetchDiagnostics = async () => {
     try {
@@ -138,34 +117,7 @@ export default function ResendDiagnosticSuite() {
     );
   }
 
-  // Pure dark decoy 404 block for unauthorized security requests
-  if (!isUnlocked) {
-    return (
-      <div className="bg-slate-950 min-h-screen text-slate-100 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-        <div className="absolute top-[-20%] left-[-20%] w-[50%] h-[50%] rounded-full bg-slate-900/10 filter blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-slate-900/10 filter blur-[120px] pointer-events-none"></div>
-
-        <div className="max-w-md w-full text-center space-y-6 z-10">
-          <div className="space-y-3">
-            <h1 className="text-9xl font-black text-slate-800 tracking-tighter">404</h1>
-            <h2 className="text-xl font-bold text-slate-200">Page Not Found</h2>
-            <p className="text-xs text-slate-400 max-w-sm mx-auto leading-relaxed">
-              The page you are looking for does not exist on this network, has been moved, or is temporarily offline.
-            </p>
-          </div>
-          <div className="pt-4">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-200 hover:text-white px-5 py-2.5 rounded-xl text-[11px] font-semibold uppercase tracking-wider transition-all"
-            >
-              Return Home
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+  // Render the diagnostics panel directly if loaded
   return (
     <div className="bg-slate-950 min-h-screen text-slate-150 py-12 px-4 relative overflow-hidden">
       {/* Decorative ambient background */}

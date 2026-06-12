@@ -13,49 +13,19 @@ export default function AdminLoginPage() {
   const [isVerifying, setIsVerifying] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [isCheckingSession, setIsCheckingSession] = useState(true);
-  const [isUnlocked, setIsUnlocked] = useState(false);
 
-  // Check and authorize gateways
+  // Check and authorize session
   useEffect(() => {
     async function checkSession() {
       try {
-        // 1. Check if we already have an active admin orders workspace session
+        // Check if we already have an active admin orders workspace session
         const sessionRes = await fetch('/api/admin/login');
         if (sessionRes.ok) {
           router.replace('/admin/orders');
           return;
         }
-
-        // 2. Check query string in URL for 'token' or 'key' parameters (client-side safe)
-        const params = new URLSearchParams(window.location.search);
-        const secretParam = params.get('token') || params.get('key');
-
-        if (secretParam) {
-          const verifyRes = await fetch('/api/admin/verify-token', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: secretParam }),
-          });
-          
-          if (verifyRes.ok) {
-            setIsUnlocked(true);
-            // Clean up the URL parameter cleanly so it isn't copied, bookmarked, or shared
-            const cleanUrl = window.location.pathname;
-            window.history.replaceState({}, document.title, cleanUrl);
-            setIsCheckingSession(false);
-            return;
-          }
-        }
-
-        // 3. Check if we already have browser gate cookie clearance
-        const gateRes = await fetch('/api/admin/verify-token');
-        if (gateRes.ok) {
-          setIsUnlocked(true);
-        } else {
-          setIsUnlocked(false);
-        }
       } catch (err) {
-        console.error("Gateway verification error:", err);
+        console.error("Session verification error:", err);
       } finally {
         setIsCheckingSession(false);
       }
@@ -91,7 +61,7 @@ export default function AdminLoginPage() {
     }
   };
 
-  // Loading Screen while resolving authentication or gateway clearance
+  // Loading Screen while resolving authentication
   if (isCheckingSession) {
     return (
       <div className="bg-slate-950 min-h-screen text-slate-100 flex items-center justify-center">
@@ -103,37 +73,7 @@ export default function AdminLoginPage() {
     );
   }
 
-  // Decoy 404 screen if the secret link wasn't used or authorized
-  if (!isUnlocked) {
-    return (
-      <div className="bg-slate-950 min-h-screen text-slate-100 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-        {/* Ambient Dark Glows */}
-        <div className="absolute top-[-20%] left-[-20%] w-[50%] h-[50%] rounded-full bg-slate-900/10 filter blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-slate-900/10 filter blur-[120px] pointer-events-none"></div>
-
-        <div className="max-w-md w-full text-center space-y-6 z-10">
-          <div className="space-y-3">
-            <h1 className="text-9xl font-black text-slate-800 tracking-tighter">404</h1>
-            <h2 className="text-xl font-bold text-slate-200">Page Not Found</h2>
-            <p className="text-xs text-slate-400 max-w-sm mx-auto leading-relaxed">
-              The page you are looking for does not exist on this network, has been moved, or is temporarily offline.
-            </p>
-          </div>
-          
-          <div className="pt-4">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-200 hover:text-white px-5 py-2.5 rounded-xl text-[11px] font-semibold uppercase tracking-wider transition-all"
-            >
-              Return Home
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Render original beautiful passcode card if gate cleared
+  // Render original beautiful passcode card
   return (
     <div className="bg-slate-950 min-h-screen text-slate-150 flex flex-col justify-center relative overflow-hidden">
       
