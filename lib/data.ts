@@ -11,21 +11,21 @@ export const categories = [
     name: 'US Dollars',
     slug: 'us-dollars',
     description: 'Industry-standard US currency props. Used in major motion pictures, music videos, and commercial shoots globally.',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-100-us-dollar-bills.224webp'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/US_%24100_Series_2009_Obverse.jpg'
   },
   {
     id: 'british-pounds',
     name: 'British Pounds',
     slug: 'british-pounds',
     description: 'Authentic-style British Pound sterling props. Specifically scaled and coloured for high-definition camera lenses.',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-ps50-gbp-bills.233webp'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/87/10_pound_note_front.jpg'
   },
   {
     id: 'euro',
     name: 'Euro',
     slug: 'euro',
     description: 'European currency replicas with true-to-scale sizing and non-reflective finishes for optimal set lighting.',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-500-euro-bills.226webp'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/100_Euro_Serie_Europa_vorderseite.jpg'
   },
   {
     id: 'canadian-dollars',
@@ -158,7 +158,7 @@ export const products = [
     price: '150.00',
     category: 'us-dollars',
     categoryName: 'US Dollars',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-100-us-dollar-bills.224webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/US_%24100_Series_2009_Obverse.jpg',
     slug: '100-usd-prop-notes-stack',
     description: 'Buy premium counterfeit $100 USD bills online. Our high-fidelity fake US 100 dollar banknotes feature true-to-life 3D blue ribbon patterns, copper-to-green color shifting bells, microprinting text, and precise portrait shading. Specially calibrated to look authentic under demanding theater staging, commercial sets, and educational demonstrations.',
     features: [
@@ -186,7 +186,7 @@ export const products = [
     price: '150.00',
     category: 'us-dollars',
     categoryName: 'US Dollars',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-50-us-dollar-bills.225webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/United_States_one_dollar_bill%2C_obverse.jpg',
     slug: '50-usd-prop-notes-stack',
     description: 'Order fake premium USD $50 bills online. Our secondary series counterfeit fifty dollar notes are designed with perfect peach/blue background gradients, distinct Grant portraiture shading, and elegant compliance markings. Features heavy-weight texturing for close-up cinema angles.',
     features: [
@@ -214,7 +214,7 @@ export const products = [
     price: '150.00',
     category: 'us-dollars',
     categoryName: 'US Dollars',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-20-us-dollar-bills.73webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/United_States_one_dollar_bill%2C_obverse.jpg',
     slug: '20-usd-prop-notes-stack',
     description: 'Buy counterfeit USD $20 dollar bills online from the absolute standard in currency replication. Perfect for background scenes, music video dumps, extreme focus prop styling, and cash register training. Features compliance-safe legal printing and precise dimensions.',
     features: [
@@ -242,7 +242,7 @@ export const products = [
     price: '150.00',
     category: 'us-dollars',
     categoryName: 'US Dollars',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-10-us-dollar-bills.85webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/United_States_one_dollar_bill%2C_obverse.jpg',
     slug: '10-usd-prop-notes-stack',
     description: 'Order high-quality counterfeit USD $10 banknotes. These prop bills are designed with the trademark amber hues of the modern ten-dollar note plus high-contrast Hamilton portraits. Handcrafted for total reliability on camera and on stage.',
     features: [
@@ -270,7 +270,7 @@ export const products = [
     price: '150.00',
     category: 'us-dollars',
     categoryName: 'US Dollars',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-5-us-dollar-bills.223webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/United_States_one_dollar_bill%2C_obverse.jpg',
     slug: '5-usd-prop-notes-stack',
     description: 'Buy high-quality fake $5 US bills online. Optimized for movie scenes, educational cashier training, and theater productions. Built with legally compliant markings and matte physical finishes to look spectacular on camera.',
     features: [
@@ -300,7 +300,7 @@ export const products = [
     price: '150.00',
     category: 'british-pounds',
     categoryName: 'British Pounds',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-ps50-gbp-bills.233webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/87/10_pound_note_front.jpg',
     slug: '50-british-pound-series-prop-notes',
     description: 'Buy premium fake £50 GBP sterling banknotes. Engineered on state-of-the-art synthetic hybrid polymer paper to simulate the distinct crisp plastic touch of modern UK banknotes. Meticulously colored, sized, and completed with clear compliance overlays.',
     features: [
@@ -328,7 +328,7 @@ export const products = [
     price: '150.00',
     category: 'british-pounds',
     categoryName: 'British Pounds',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-ps20-gbp-bills.234webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/85/5_pound_note_front.jpg',
     slug: '20-british-pound-prop-notes',
     description: 'Purchase premium quality fake £20 pound notes online. Perfect for high-definition music promotion, film shoots, theater, and retail training props. Features stunning blue-purple hues and the high-fidelity Queen/Turner design.',
     features: [
@@ -356,7 +356,7 @@ export const products = [
     price: '150.00',
     category: 'british-pounds',
     categoryName: 'British Pounds',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-ps10-gbp-bills.235webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/87/10_pound_note_front.jpg',
     slug: '10-british-pound-prop-notes',
     description: 'Buy fake £10 pound banknotes online. Highly realistic British pound replicas featuring rich amber-brown details, compliant security alignments, and crisp tactile textures.',
     features: [
@@ -384,7 +384,7 @@ export const products = [
     price: '150.00',
     category: 'british-pounds',
     categoryName: 'British Pounds',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-ps5-gbp-bills.236webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/85/5_pound_note_front.jpg',
     slug: '5-gbp-prop-notes-stack',
     description: 'Shop authentic replica £5 banknotes online. Ideal for music videos and retail training courses. Formulated on non-reflective hybrid polymer paper to pass high-definition lens scrutiny.',
     features: [
@@ -414,7 +414,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-500-euro-bills.226webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/100_Euro_Serie_Europa_vorderseite.jpg',
     slug: '500-euro-series-prop-notes',
     description: 'Get elite fake 500 Euro banknotes online. Highly requested for international cinematic sets, movie bank-heists, and elite theatrical projects. Built with deep rich purples and legally compliant marking details to keep your production worry-free.',
     features: [
@@ -442,7 +442,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-eur200-euro-bills.227webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Euro_banknotes_2.jpg',
     slug: '200-euro-series-prop-notes',
     description: 'Order high-quality fake €200 Euro prop notes. Meticulously detailed yellow-orange tones matching actual bill dimensions. Created specifically for high-definition TV productions and training drills.',
     features: [
@@ -470,7 +470,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-eur100-euro-bills.228webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/100_Euro_Serie_Europa_vorderseite.jpg',
     slug: '100-euro-series-prop-notes',
     description: 'Buy premium counterfeit €100 banknotes online. Meticulously generated green spectrum tones matching legal reproduction templates. Features extreme details and compliance safe features.',
     features: [
@@ -498,7 +498,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-eur5-euro-bills.229webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/36/50_Euro_Serie_Europa_vorderseite.jpg',
     slug: '50-euro-series-prop-notes',
     description: 'Get high-quality counterfeit €50 banknotes. Meticulously designed orange-brown tones and compliance-safe designs. Highly durable stock crafted for live training registers or rapid-pace film sets.',
     features: [
@@ -526,7 +526,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-eur20-euro-bills.230webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Euro_banknotes_2.jpg',
     slug: '20-euro-series-prop-notes',
     description: 'Order counterfeit €20 Euro bills online. High-grade replica banknotes of the popular twenty Euro note. Crafted with direct hybrid polymer-paper stock for realistic touch and high-durability.',
     features: [
@@ -554,7 +554,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-eur10-euro-bills.231webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/36/50_Euro_Serie_Europa_vorderseite.jpg',
     slug: '10-euro-series-prop-notes',
     description: 'Purchase counterfeit €10 banknotes. Made with realistic polymer coating simulation, stunning terracotta-red gradients, and legal compliance marking safety overlays.',
     features: [
@@ -582,7 +582,7 @@ export const products = [
     price: '150.00',
     category: 'euro',
     categoryName: 'Euro',
-    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-eur5-euro-bills.232webp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/36/50_Euro_Serie_Europa_vorderseite.jpg',
     slug: '5-euro-series-prop-notes',
     description: 'Order counterfeit €5 Euro prop notes. Our lowest value replica notes are perfect for film extras, cash drops, cashier classes, and theater production bags.',
     features: [
