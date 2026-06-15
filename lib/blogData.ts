@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     date: "May 28, 2026",
     readTime: "12 min read",
     category: "Industry Insights",
-    image: "https://propcounterfeitnotes.com/public/upload/product/buy-100-us-dollar-bills.224webp",
+    image: "https://images.unsplash.com/photo-1554188284-a15286ce1729?auto=format&fit=crop&w=800&q=80",
     excerpt: "An exhaustive look into the evolution of screen currency: from early-era crude newsprints to state-of-the-art polymer-hybrid replica banknotes calibrated for Ultra-HD 8K lenses.",
     content: `### Introduction: The Silent Action Hero of the Screen
 
@@ -139,7 +139,7 @@ The finest prop design is the one the viewer never notices. When prop cash is cr
     date: "June 3, 2026",
     readTime: "11 min read",
     category: "Set Design",
-    image: "https://propcounterfeitnotes.com/public/upload/product/buy-500-euro-bills.226webp",
+    image: "https://images.unsplash.com/photo-1628156172605-ff368c78c353?auto=format&fit=crop&w=800&q=80",
     excerpt: "A comprehensive masterclass on lighting prop banknotes, avoiding glare on digital sensors, and using specialized camera angles to elevate your currency-focused scenes.",
     content: `### Introduction: The Camera's Selective Vision
 
