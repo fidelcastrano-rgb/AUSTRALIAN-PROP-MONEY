@@ -4,7 +4,7 @@ export const categories = [
     name: 'Australian Dollars',
     slug: 'australian-dollars',
     description: 'High-quality replica Australian prop notes, meticulously designed for compliance and commercial production use.',
-    image: 'https://superpropnotes.com/wp-content/uploads/2023/06/cd7072b9df060e9841a84c6ced00be46.jpg'
+    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-aud-100-dollars.219webp'
   },
   {
     id: 'us-dollars',
@@ -44,7 +44,7 @@ export const products = [
     category: 'australian-dollars',
     categoryName: 'Australian Dollars',
     slug: 'buy-counterfeit-aud-10-dollar-banknotes',
-    image: 'https://superpropnotes.com/wp-content/uploads/2025/07/10-A.jpg',
+    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-aud-10-dollar.222webp',
     price: '150.00',
     description: 'Buy premium quality counterfeit AUD $10 dollar banknotes online. Meticulously designed to mimic real Australian paper/polymer bank notes, featuring vivid ocean-blue color gradients, exact tactile print dimensions, and legal reproduction compliance markings. Perfect for cinema filming, music videos, educational purposes, and tactical sets under high lighting.',
     features: [
@@ -72,7 +72,7 @@ export const products = [
     category: 'australian-dollars',
     categoryName: 'Australian Dollars',
     slug: 'buy-counterfeit-aud-20-dollar-banknotes',
-    image: 'https://superpropnotes.com/wp-content/uploads/2023/06/20-AD.jpg',
+    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-aud-20-dollars.221webp',
     price: '150.00',
     description: 'Order counterfeit Australian $20 bills online. Our high-fidelity fake Australian 20 dollar banknotes are built with specialized polymer-simulate coating, precise red-orange color spectrum reproduction, clear portrait margins, and legal compliance markings. An absolute favorite for TV productions, motion pictures, and visual training simulations.',
     features: [
@@ -100,7 +100,7 @@ export const products = [
     category: 'australian-dollars',
     categoryName: 'Australian Dollars',
     slug: 'buy-counterfeit-aud-50-dollar-banknotes',
-    image: 'https://superpropnotes.com/wp-content/uploads/2023/06/50-AD.jpg',
+    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-aud-50-dollar-banknotes.252webp',
     price: '150.00',
     description: 'Order fake premium AUD $50 dollar bills. These top-tier counterfeit banknotes are optimized for extreme high-definition camera lenses. With precise golden-yellow and green tones, secure micro-contrast portraits, and classic bank strap bundling, they add massive realistic volume to any cash prop bag or cash dump scene.',
     features: [
@@ -128,7 +128,7 @@ export const products = [
     category: 'australian-dollars',
     categoryName: 'Australian Dollars',
     slug: 'buy-counterfeit-aud-100-dollar-banknotes',
-    image: 'https://superpropnotes.com/wp-content/uploads/2023/06/cd7072b9df060e9841a84c6ced00be46.jpg',
+    image: 'https://propcounterfeitnotes.com/public/upload/product/buy-aud-100-dollars.219webp',
     price: '150.00',
     description: 'Order elite counterfeit Australian 100 Dollar Bills online. Crafted specifically for premium video shoots, music promotions, and luxury theater displays where high bills are required. Matches original corporate currency layouts perfectly, with deep green and gold gradients and crisp edges.',
     features: [

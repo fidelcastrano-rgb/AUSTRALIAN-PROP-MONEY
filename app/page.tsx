@@ -133,7 +133,7 @@ export default function Home() {
         </div>
 
         <div className="col-span-1 lg:col-span-5 relative bg-banknote-navy overflow-hidden order-1 lg:order-2 min-h-[400px]">
-          <div className="absolute inset-0 opacity-40 bg-[url('https://superpropnotes.com/wp-content/uploads/2023/06/cd7072b9df060e9841a84c6ced00be46.jpg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 opacity-40 bg-[url('https://propcounterfeitnotes.com/public/upload/product/buy-aud-100-dollars.219webp')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-banknote-navy/40 to-banknote-navy hidden lg:block"></div>
           
           <div className="absolute bottom-8 right-6 left-6 lg:bottom-10 lg:right-10 lg:left-10 p-6 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2">
               <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image 
-                  src="https://superpropnotes.com/wp-content/uploads/2023/06/cd7072b9df060e9841a84c6ced00be46.jpg" 
+                  src="https://propcounterfeitnotes.com/public/upload/product/buy-aud-100-dollars.219webp" 
                   alt="Quality Prop Money Printing"
                   fill
                   className="object-cover"
