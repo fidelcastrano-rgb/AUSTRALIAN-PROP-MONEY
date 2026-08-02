@@ -32,8 +32,8 @@ export default function ContactPage() {
                   <div className="ml-4">
                     <h3 className="font-bold text-gray-900">WhatsApp</h3>
                     <p className="mt-1">
-                      <a href="https://wa.me/61485989180" target="_blank" rel="noopener noreferrer" className="text-banknote-green font-semibold hover:underline">
-                        +61485989180
+                      <a href="https://wa.me/61468187831" target="_blank" rel="noopener noreferrer" className="text-banknote-green font-semibold hover:underline">
+                        +61468187831
                       </a>
                     </p>
                     <p className="text-xs text-gray-500 mt-1">Chat live is available for instant support</p>
@@ -60,7 +60,7 @@ export default function ContactPage() {
               <p className="text-sm text-gray-300 mb-4">
                 We understand that shooting schedules change rapidly. If you require overnight delivery or same-day local courier service, please message us directly via WhatsApp or Email for priority support.
               </p>
-              <a href="https://wa.me/61485989180" target="_blank" rel="noopener noreferrer" className="inline-block bg-banknote-gold text-banknote-navy px-4 py-2 rounded font-bold hover:bg-white transition-colors">Message on WhatsApp</a>
+              <a href="https://wa.me/61468187831" target="_blank" rel="noopener noreferrer" className="inline-block bg-banknote-gold text-banknote-navy px-4 py-2 rounded font-bold hover:bg-white transition-colors">Message on WhatsApp</a>
             </div>
           </div>
 

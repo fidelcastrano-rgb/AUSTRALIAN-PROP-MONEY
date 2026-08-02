@@ -103,7 +103,7 @@ export default function TermsOfServicePage() {
             <Mail className="w-4 h-4 text-banknote-green" />
             <span>info@australianpropsmoney.com</span>
             <span className="text-slate-300">|</span>
-            <span>WhatsApp Group Support: +61485989180</span>
+            <span>WhatsApp Group Support: +61468187831</span>
           </p>
         </div>
 

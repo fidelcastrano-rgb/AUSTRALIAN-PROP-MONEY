@@ -6,7 +6,7 @@ export const organizationSchema = {
   logo: 'https://australianpropsmoney.com/logo.png',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+61485989180',
+    telephone: '+61468187831',
     contactType: 'customer service',
     areaServed: 'AU',
     availableLanguage: 'English'
@@ -20,7 +20,7 @@ export const localBusinessSchema = {
   image: 'https://australianpropsmoney.com/storefront.jpg',
   '@id': 'https://australianpropsmoney.com',
   url: 'https://australianpropsmoney.com',
-  telephone: '+61485989180',
+  telephone: '+61468187831',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Sydney',
