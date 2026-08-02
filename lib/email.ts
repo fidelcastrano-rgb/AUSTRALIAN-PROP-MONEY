@@ -153,7 +153,7 @@ export function renderCustomerEmailHTML({
             </div>
           ` : ''}
 
-          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">If you have any urgent timing requests, feel free to contact us via WhatsApp: <strong>+61485989180</strong> or reply to this email at <strong>${process.env.RESEND_ADMIN_EMAIL || 'sales@australianpropsmoney.com'}</strong>.</p>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">If you have any urgent timing requests, feel free to contact us via WhatsApp: <strong>+61468187831</strong> or reply to this email at <strong>${process.env.RESEND_ADMIN_EMAIL || 'sales@australianpropsmoney.com'}</strong>.</p>
         </div>
         
         <!-- Footer -->

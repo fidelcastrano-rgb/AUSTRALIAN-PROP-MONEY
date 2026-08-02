@@ -410,7 +410,7 @@ export default function Home() {
                 <span>Contact Creative Dept</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="https://wa.me/61485989180" className="inline-flex justify-center items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/60 text-white rounded-lg font-bold transition-all text-sm uppercase">
+              <a href="https://wa.me/61468187831" className="inline-flex justify-center items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/60 text-white rounded-lg font-bold transition-all text-sm uppercase">
                 <span>Direct WhatsApp Chat</span>
               </a>
             </div>

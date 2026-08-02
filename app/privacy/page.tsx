@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                 <h3 className="font-bold text-banknote-navy text-sm uppercase tracking-wide mb-2">Communication History</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Records of your design inquiries, custom order details requested via WhatsApp (+61485989180), contact forms, or email messages.
+                  Records of your design inquiries, custom order details requested via WhatsApp (+61468187831), contact forms, or email messages.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
             Have questions about our data security operations or custom orders privacy?
           </p>
           <p className="text-sm font-semibold text-banknote-navy mt-2">
-            Contact us at <span className="text-banknote-green">info@australianpropsmoney.com</span> or via WhatsApp <span className="text-banknote-green">+61485989180</span>
+            Contact us at <span className="text-banknote-green">info@australianpropsmoney.com</span> or via WhatsApp <span className="text-banknote-green">+61468187831</span>
           </p>
         </div>
 

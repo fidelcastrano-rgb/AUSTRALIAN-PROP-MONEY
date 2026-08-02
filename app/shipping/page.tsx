@@ -140,7 +140,7 @@ export default function ShippingPolicyPage() {
             <strong>Need instant tracking reviews or urgent overnight filmmaker delivery scheduling?</strong>
           </p>
           <p className="text-sm font-semibold text-banknote-navy">
-            Chat with us on WhatsApp <span className="text-banknote-green">+61485989180</span> or contact tracking: <span className="text-banknote-green">info@australianpropsmoney.com</span>
+            Chat with us on WhatsApp <span className="text-banknote-green">+61468187831</span> or contact tracking: <span className="text-banknote-green">info@australianpropsmoney.com</span>
           </p>
         </div>
 
