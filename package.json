@@ -10,8 +10,8 @@
     "deploy": "npx wrangler pages deploy .vercel/output/static",
     "pages:deploy": "npx wrangler pages deploy .vercel/output/static",
     "start": "next start",
-    "lint": "eslint .",
-    "clean": "next clean"
+    "lint": "next lint",
+    "clean": "rm -rf .next .vercel"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
